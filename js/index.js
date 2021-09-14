@@ -1,10 +1,10 @@
 // Menú de items
-const menu = `Elige un producto: 
-1. Remera Negra
-2. Remera Blanca
-3. Remera Azul
-4. Mochila Sumo
-5. Taza Luca Prodan
+const menu = `Elija un producto, ingresando el número correspondiente: 
+1. Remera Negra - $650
+2. Remera Blanca - $650
+3. Remera Azul - $800
+4. Mochila Sumo - $1400
+5. Taza Luca Prodan - $450
 6. Salir
 `;
 
@@ -38,6 +38,14 @@ const stockAmount = (quantity, stock) => {
   }
 };
 
+const size = () => {
+  prompt(`¿Qué talle quisiera?
+Small
+Medium
+Large
+ExtraLarge`);
+};
+
 // Función agregar al carrito y calcular costo
 function addToCart(item, quantity) {
   switch (item) {
@@ -45,6 +53,7 @@ function addToCart(item, quantity) {
       if (stockAmount(quantity, item1Stock)) {
         cart += quantity * item1Price;
         item1Stock -= quantity;
+        size();
         alert('Item agregado al carrito.');
       }
       break;
@@ -53,6 +62,7 @@ function addToCart(item, quantity) {
       if (stockAmount(quantity, item2Stock)) {
         cart += quantity * item2Price;
         item2Stock -= quantity;
+        size();
         alert('Item agregado al carrito.');
       }
       break;
@@ -61,6 +71,7 @@ function addToCart(item, quantity) {
       if (stockAmount(quantity, item3Stock)) {
         cart += quantity * item3Price;
         item3Stock -= quantity;
+        size();
         alert('Item agregado al carrito.');
       }
       break;
@@ -99,7 +110,7 @@ do {
   addToCart(item, quantity);
 
   answer = prompt('¿Desea agregar algo más al carrito? Si/No');
-} while (answer === 'Si');
+} while (answer === 'Si' || answer === 'si' || answer === 'SI');
 
 if (cart > 0) {
   alert(`Su compra tiene un total de $${cart}.`);

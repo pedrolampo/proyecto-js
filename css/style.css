@@ -1,0 +1,735 @@
+@charset "UTF-8";
+html {
+  background-color: black;
+  scroll-behavior: smooth;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  color: white;
+  font-weight: normal; }
+
+body {
+  margin: 0;
+  background: black;
+  background: linear-gradient(180deg, black 0%, #1c1c1c 35%, #181818 100%); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif; }
+
+.oswald {
+  font-family: "Oswald", sans-serif; }
+
+#haciaArriba {
+  width: 50px;
+  height: 45px;
+  position: fixed;
+  bottom: 4em;
+  right: 3em;
+  background-color: #2c2c2c;
+  padding: .2em;
+  border-radius: 8px; }
+  #haciaArriba img {
+    width: 100%;
+    height: 100%; }
+
+/**** Header ****/
+nav {
+  background-color: black;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  border-bottom: 1px solid white; }
+  nav div.container-fluid {
+    padding: 1rem 3rem 1rem 0; }
+    nav div.container-fluid .logo {
+      width: 18rem;
+      padding-left: 1.5em;
+      transition: all .3s ease-in-out; }
+    nav div.container-fluid div.navegacion {
+      justify-content: flex-end; }
+      nav div.container-fluid div.navegacion ul.navbar-nav li.nav-item {
+        padding-left: 2rem; }
+        nav div.container-fluid div.navegacion ul.navbar-nav li.nav-item .navButton {
+          color: white; }
+        nav div.container-fluid div.navegacion ul.navbar-nav li.nav-item .navButton:hover {
+          color: red; }
+      nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul {
+        background-color: black;
+        color: white;
+        margin-left: 1.5em;
+        font-size: .75em; }
+        nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul a {
+          color: white;
+          transition: all .1s ease-in-out; }
+        nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul a:hover {
+          background-color: #1f1f1f;
+          color: red; }
+
+/**** Portada ****/
+.banner {
+  width: 100%; }
+  .banner img {
+    width: 100%; }
+
+/**** Footer ****/
+#footer {
+  font-weight: bold;
+  width: 100%;
+  padding: 2em 5em 1em;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  border-top: 1px solid white;
+  align-items: center; }
+  #footer div.social {
+    display: flex;
+    flex-direction: row; }
+    #footer div.social .social--instagram {
+      width: 35px; }
+    #footer div.social .social--youtube {
+      width: 30px; }
+    #footer div.social .social--instagram {
+      margin-top: -5px; }
+  #footer a {
+    color: white;
+    padding-right: 2em;
+    text-decoration: none; }
+  #footer .twitter {
+    margin-left: 6.5em; }
+    #footer .twitter a {
+      padding-right: 0; }
+    #footer .twitter a:hover {
+      color: red;
+      text-decoration: underline; }
+
+/**** Inicio ****/
+/** Inicio - Cards **/
+.main {
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%; }
+  .main .mainTitle {
+    font-size: 7rem;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1%; }
+  .main .articles {
+    text-align: left;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 2rem 0 2rem; }
+    .main .articles .article {
+      width: 20%;
+      border-radius: 8px;
+      background-color: #2c2c2c;
+      transition: all .2s ease-in-out; }
+      .main .articles .article a {
+        text-decoration: none;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px; }
+        .main .articles .article a .imgArticle {
+          width: 100%;
+          height: 200px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px; }
+        .main .articles .article a h3 {
+          width: 75%;
+          padding: 1em 5% 0;
+          font-size: 1.3rem;
+          letter-spacing: 1px;
+          font-weight: normal;
+          color: white; }
+        .main .articles .article a .textoInfo {
+          width: 75%;
+          padding-left: 5%;
+          padding-right: 5%;
+          font-size: 1rem;
+          letter-spacing: .7px;
+          color: #FC3;
+          font-weight: lighter; }
+    .main .articles .article:hover {
+      transform: scale(1.05); }
+
+/** Inicio - Luca Not Dead **/
+.lucaNotDead {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 3em;
+  font-family: "Oswald", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center; }
+  .lucaNotDead img {
+    border-radius: 12px;
+    width: 35em; }
+  .lucaNotDead div {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    padding: 1em 2em .5em;
+    background-color: rgba(77, 77, 77, 0.13);
+    border-radius: 8px; }
+  .lucaNotDead .añoLuca {
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+    margin-top: -.5em; }
+  .lucaNotDead .verMas {
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 2.5em; }
+    .lucaNotDead .verMas a {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+      padding: .5rem 1.5rem .5rem;
+      border-radius: 8px;
+      transition: all .1s ease-in-out; }
+    .lucaNotDead .verMas a:hover {
+      color: white;
+      background-color: #d80000;
+      letter-spacing: 1px; }
+  .lucaNotDead .verMas:hover {
+    transform: scale(1.1); }
+
+/** Inicio - Videos **/
+#videos {
+  background-image: url(../img/bkground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #videos #tituloVideos {
+    text-align: center;
+    color: red;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 2em 0 1em; }
+  #videos .videos {
+    width: 92%;
+    margin: 0 4% 5em 4%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; }
+    #videos .videos div {
+      background-color: #2c2c2c;
+      width: 35%;
+      margin: 2rem 0 2rem;
+      border-radius: 8px; }
+    #videos .videos iframe {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px; }
+    #videos .videos p {
+      padding: 1em 1em .5em;
+      font-family: "Oswald", sans-serif;
+      color: #FC3; }
+
+/**** Integrantes ****/
+#integrantes {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 5em; }
+  #integrantes .tituloMiembros {
+    padding-top: 1em;
+    padding-left: .3em;
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #FC3; }
+  #integrantes .miembros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); }
+    #integrantes .miembros img {
+      width: 23em;
+      height: 15em;
+      grid-area: foto; }
+    #integrantes .miembros div {
+      display: grid;
+      grid-template-areas: "nombre nombre" "foto  biografía" "foto  wikipedia";
+      grid-template-rows: .1fr 1fr;
+      grid-template-columns: 23em 1fr;
+      padding: 3em 1em 5em;
+      justify-content: center; }
+    #integrantes .miembros p {
+      grid-area: biografía;
+      font-family: "Montserrat", sans-serif;
+      text-align: left;
+      line-height: 25px;
+      padding: 0 2em 0;
+      color: white; }
+    #integrantes .miembros .nombre {
+      grid-area: nombre;
+      border-bottom: 1px solid white;
+      font-size: 2em;
+      text-transform: uppercase;
+      text-align: left;
+      font-family: "Oswald", sans-serif;
+      margin-bottom: 2em;
+      padding: 0 0 .2em 0;
+      letter-spacing: 1px;
+      color: #FC3; }
+    #integrantes .miembros .wikipedia {
+      grid-area: wikipedia;
+      justify-self: center;
+      margin-top: -2em; }
+      #integrantes .miembros .wikipedia a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        background-color: #2c2c2c;
+        width: 4.65em;
+        height: 1em;
+        padding: .5em 1em .5em;
+        border-radius: 8px;
+        transition: all .2s; }
+      #integrantes .miembros .wikipedia a:hover {
+        color: red; }
+
+/**** Discografía ****/
+#discografia {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /** Discografía - Menú Discos **/
+  /** Discografía - Lista de Canciones **/ }
+  #discografia .discMenu {
+    padding-left: 2.5em;
+    line-height: 30px;
+    color: white; }
+    #discografia .discMenu .discTitle {
+      font-size: 55px;
+      text-transform: uppercase;
+      color: #FC3;
+      padding-top: .5em; }
+    #discografia .discMenu #discos ul {
+      list-style-type: square;
+      font-size: 18px;
+      list-style-position: outside;
+      font-family: "Montserrat", sans-serif; }
+    #discografia .discMenu a {
+      color: white;
+      text-decoration: none; }
+    #discografia .discMenu #discos a:hover {
+      color: #8f8f8f; }
+    #discografia .discMenu .menuPos {
+      position: sticky;
+      top: .5em; }
+  #discografia #songLists {
+    padding: 0 1em 1em 5em;
+    color: white; }
+    #discografia #songLists ul {
+      list-style-type: none;
+      list-style-position: outside;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      line-height: 30px; }
+    #discografia #songLists .corpiños, #discografia #songLists .divididos, #discografia #songLists .monos, #discografia #songLists .after, #discografia #songLists .fiebre {
+      padding-top: 3.5em; }
+    #discografia #songLists .divididos {
+      display: block;
+      padding-left: 0;
+      margin: 0; }
+    #discografia #songLists .lado2 {
+      padding-top: .5em; }
+    #discografia #songLists a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #FC3;
+      font-family: "Oswald", sans-serif; }
+    #discografia #songLists a:hover {
+      color: red;
+      text-decoration: underline; }
+
+/**** Historia ****/
+#historia {
+  font-family: "Montserrat", sans-serif;
+  padding: 1.5em;
+  font-size: 16px;
+  color: white;
+  letter-spacing: .8px;
+  line-height: 25px;
+  text-align: justify; }
+  #historia .titulos-1 {
+    font-size: 4rem;
+    color: #FC3;
+    text-transform: uppercase; }
+  #historia .titulos-2 {
+    font-size: 2rem;
+    color: #FC3;
+    text-transform: uppercase; }
+  #historia .frase {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Mate SC", serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    color: red; }
+
+/**** Contacto ****/
+section.form {
+  color: white;
+  padding: 2rem 0 4rem; }
+  section.form h2 {
+    text-transform: uppercase;
+    color: #FC3;
+    font-size: 2.5rem; }
+  section.form p {
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 1rem; }
+  section.form form {
+    width: 80%;
+    margin: 0 auto; }
+    section.form form .mensaje {
+      padding-top: 1.5rem; }
+      section.form form .mensaje span {
+        align-items: flex-start; }
+    section.form form #gridCheck:checked {
+      background-color: red;
+      border: none; }
+    section.form form button {
+      background-color: white;
+      color: black;
+      border: none; }
+    section.form form button:hover {
+      background-color: red;
+      border: none; }
+
+/**** Productos ****/
+section#tienda #tituloTienda {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: red;
+  padding: 1em 0 1em; }
+
+section#tienda .col {
+  padding: 1.3em; }
+
+section#tienda .item {
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  color: #FC3;
+  font-size: 1rem;
+  height: 27em; }
+  section#tienda .item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    width: auto;
+    height: 16em; }
+  section#tienda .item div.card-body .card-text {
+    margin-top: .7em; }
+  section#tienda .item div.card-body #precioItem {
+    margin-top: -.5em; }
+  section#tienda .item div.card-body .btnComprar {
+    margin-left: 4.5em;
+    background-color: white;
+    color: black;
+    border: black; }
+
+/**** Carrito ****/
+#carrito #myModal h5 {
+  font-family: "Montserrat", sans-serif; }
+
+#carrito div.carrito {
+  text-align: center; }
+  #carrito div.carrito h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 5rem;
+    color: #FC3;
+    padding-top: 2rem; }
+  #carrito div.carrito div p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: white;
+    padding-top: 3rem; }
+  #carrito div.carrito div p.textoCarrito {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: white;
+    padding: 0 0 3rem; }
+    #carrito div.carrito div p.textoCarrito a {
+      color: white; }
+
+/**** Desktop Small ****/
+@media screen and (max-width: 1500px) {
+  html {
+    width: 100%;
+    margin: 0; }
+  /** Header **/
+  nav {
+    font-size: 1.2rem;
+    height: 6rem; }
+    nav .logo {
+      width: 10rem; }
+  /** Index **/
+  section.main {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+    section.main .articles {
+      display: flex;
+      flex-flow: row wrap;
+      grid-gap: 3rem; }
+      section.main .articles .article {
+        width: 35%; }
+        section.main .articles .article img {
+          height: 15rem; }
+  .lucaNotDead {
+    justify-content: space-between; }
+    .lucaNotDead div {
+      padding: 2rem 1rem 0; }
+  #videos div.videos {
+    width: 96%;
+    margin-right: 2%;
+    margin-left: 2%; }
+    #videos div.videos div {
+      width: 40%; }
+  /**Integrantes **/
+  #integrantes .tituloMiembros {
+    text-align: left;
+    padding: 2rem .3rem 0; }
+  #integrantes .miembros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    #integrantes .miembros div {
+      display: grid;
+      grid-template-areas: "nombre nombre" "foto foto" "biografía biografía" "wikipedia wikipedia";
+      grid-template-rows: .1fr 1fr;
+      grid-template-columns: .5fr 1fr;
+      padding: 3rem .5rem 2rem;
+      justify-content: center; }
+      #integrantes .miembros div img {
+        width: 100%;
+        padding: 0 6rem 1rem;
+        margin-top: -3rem; }
+      #integrantes .miembros div .wikipedia {
+        margin-top: 1rem; }
+  /** Discografía **/
+  #discografia .discMenu {
+    width: 20rem; }
+    #discografia .discMenu .discTitle {
+      font-size: 3rem; }
+  /** Productos **/
+  #tienda .productos {
+    width: 90%;
+    margin-left: 7%;
+    margin-right: 3%; }
+    #tienda .productos .item {
+      margin: 0 3rem 0; } }
+
+/**** Tablet ****/
+@media screen and (max-width: 1024px) {
+  html {
+    width: 100vw;
+    margin: 0; }
+  #haciaArriba {
+    display: none; }
+  /** Header **/
+  nav {
+    width: 100vw;
+    height: auto; }
+  .banner {
+    margin: 0; }
+  /** Index **/
+  section.main .articles {
+    display: grid;
+    grid-template-rows: repeat(2, 40%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    justify-items: center; }
+    section.main .articles .article {
+      width: 95%;
+      height: 22em;
+      margin-bottom: 3em; }
+  #videos div.videos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center; }
+    #videos div.videos div {
+      width: 80%; }
+  .lucaNotDead {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 0; }
+    .lucaNotDead div {
+      padding: 4rem 3rem 0; }
+      .lucaNotDead div .verMas {
+        font-size: 25px;
+        font-weight: normal;
+        padding-bottom: 0;
+        margin: 0 5% 4em 5%; }
+  /** Integrantes **/
+  #integrantes {
+    width: 90%;
+    margin: 0 5% 0; }
+    #integrantes .tituloMiembros {
+      text-align: center; }
+    #integrantes .miembros {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly; }
+      #integrantes .miembros div {
+        display: grid;
+        grid-template-areas: "nombre nombre" "foto biografía" "wikipedia wikipedia";
+        grid-template-rows: .1fr 1fr;
+        grid-template-columns: .5fr 1fr;
+        padding: 3rem 0 2rem;
+        justify-content: center; }
+        #integrantes .miembros div img {
+          margin: 0;
+          padding: 0 0 1rem; }
+        #integrantes .miembros div p {
+          text-align: justify; }
+        #integrantes .miembros div .wikipedia {
+          padding-top: 3rem; }
+  /** Discografia **/
+  .discMenu {
+    padding-left: 4rem;
+    width: 20em; }
+  .menuPos {
+    position: relative;
+    padding: 0;
+    top: 0; }
+  /** Productos **/
+  div.productos {
+    width: 90%;
+    padding-left: 15%; }
+  /** Contacto **/
+  .form {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0; } }
+
+/**** Mobile ****/
+@media screen and (max-width: 600px) {
+  html {
+    width: 100vw;
+    margin: 0; }
+  #haciaArriba {
+    display: none; }
+  /** Nav **/
+  nav {
+    width: 100vw; }
+    nav div.container-fluid .logo {
+      width: 12rem; }
+  .banner {
+    display: none; }
+  /** Footer **/
+  #footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    text-align: center; }
+    #footer div {
+      padding-left: 2.5rem; }
+    #footer .twitter {
+      margin: 0; }
+  /** Index **/
+  section.main .mainTitle {
+    font-size: 5rem;
+    margin-top: 1rem; }
+  section.main .articles {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2em;
+    justify-items: center; }
+    section.main .articles .article {
+      width: 80%;
+      height: 22rem; }
+  .lucaNotDead {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+    .lucaNotDead img {
+      width: 80%; }
+    .lucaNotDead div {
+      padding: 2.5rem 2rem 0;
+      font-size: 2rem;
+      font-style: normal;
+      color: white; }
+      .lucaNotDead div .añoLuca {
+        font-size: 1.5rem; }
+      .lucaNotDead div .verMas {
+        font-size: 1rem;
+        padding: 0; }
+  .videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center; }
+    .videos div {
+      width: 80%; }
+  /** Integrantes **/
+  #integrantes {
+    width: 90%;
+    margin: 0 5% 0; }
+    #integrantes .tituloMiembros {
+      text-align: center; }
+    #integrantes .miembros {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly; }
+      #integrantes .miembros div {
+        display: grid;
+        grid-template-areas: "nombre nombre" "foto foto" "biografía biografía" "wikipedia wikipedia";
+        grid-template-rows: .1fr 1fr;
+        grid-template-columns: .5fr 1fr;
+        padding: 3rem 0 2rem;
+        justify-content: center; }
+        #integrantes .miembros div img {
+          margin: 0;
+          padding: 0 0 1rem; }
+        #integrantes .miembros div p {
+          text-align: justify; }
+        #integrantes .miembros div .wikipedia {
+          padding-top: 3rem; }
+  /** Discografía **/
+  #discografia {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: center; }
+    #discografia .discMenu {
+      display: none; }
+    #discografia #songLists {
+      padding: 0 2rem 2rem 2rem;
+      text-align: left; }
+  /** Historia **/
+  .titulos {
+    line-height: 2.5rem; }
+  /** Productos **/
+  section #carouselExampleSlidesOnly {
+    display: none; }
+  #tienda .productos {
+    width: 90%;
+    padding: 0; }
+    #tienda .productos .item {
+      margin: 0;
+      margin-left: -6%; }
+  /** Contacto **/
+  .form {
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%; } }

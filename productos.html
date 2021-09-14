@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumo - Tienda</title>
+    <meta
+      name="description"
+      content="Tienda del merchandising no-oficial de la banda Sumo."
+    />
+    <meta
+      name="keywords"
+      content="Sumo, Rock, Punk, Reggae, Banda Argentina, Banda Sumo"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/estilos.min.css" />
+    <link rel="shortcut icon" href="img/logo4.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img src="img/logoedit.png" alt="Logo Sumo" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navegacion" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link navButton" href="index.html">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navButton" href="integrantes.html"
+                >INTEGRANTES</a
+              >
+            </li>
+            <li class="nav-item dropdown" id="subMenu">
+              <a
+                class="nav-link dropdown-toggle navButton"
+                href="discografia.html"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                DISCOGRAFIA
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="discografia.html"
+                    >SU DISCOGRAFIA</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="discografia.html#corpiños"
+                    >CORPIÑOS EN LA MADRUGADA</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="discografia.html#divididos"
+                    >DIVIDIDOS POR LA FELICIDAD</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="discografia.html#monos"
+                    >LLEGANDO LOS MONOS</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="discografia.html#after"
+                    >AFTER CHABON</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="discografia.html#fiebre"
+                    >FIEBRE</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navButton" href="historia.html">HISTORIA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navButton" href="productos.html">TIENDA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navButton" href="contacto.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <!-- banner de portada -->
+      <img src="img/portada3.jpg" alt="Foto Integrantes" />
+    </div>
+
+    <section id="tienda" class="container-xl">
+      <h1 id="tituloTienda">Nuestros Productos</h1>
+
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/carrousel1.png"
+              class="d-block w-100"
+              alt="Carrousel 3 Productos"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/carrousel2.png"
+              class="d-block w-100"
+              alt="Carrousel 3 Productos"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/carrousel3.png"
+              class="d-block w-100"
+              alt="Carrousel 3 Productos"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row productos">
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch.jpg"
+              class="card-img-top"
+              alt="Remera Sumo Negra"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Remera Sumo Negra</h5>
+              <p class="card-text">
+                <label for="talle">Talle:</label>
+                <select name="talle" id="talle">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">ExtraLarge</option>
+                </select>
+              </p>
+              <p id="precioItem">Precio: $650</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch2.jpg"
+              class="card-img-top"
+              alt="Remera Sumo Blanca"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Remera Sumo Blanca</h5>
+              <p class="card-text">
+                <label for="talle">Talle:</label>
+                <select name="talle" id="talle">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">ExtraLarge</option>
+                </select>
+              </p>
+              <p id="precioItem">Precio: $650</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch3.png"
+              class="card-img-top"
+              alt="Remera After Chabón"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Remera After Chabón</h5>
+              <p class="card-text">
+                <label for="talle">Talle:</label>
+                <select name="talle" id="talle">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">ExtraLarge</option>
+                </select>
+              </p>
+              <p id="precioItem">Precio: $800</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch4.jpg"
+              class="card-img-top"
+              alt="Remera Luca Azul"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Remera Luca Azul</h5>
+              <p class="card-text">
+                <label for="talle">Talle:</label>
+                <select name="talle" id="talle">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">ExtraLarge</option>
+                </select>
+              </p>
+              <p id="precioItem">Precio: $800</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row productos">
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch5.jpg"
+              class="card-img-top"
+              alt="Remera Sumo Luca Roja"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Remera Luca Roja</h5>
+              <p class="card-text">
+                <label for="talle">Talle:</label>
+                <select name="talle" id="talle">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">ExtraLarge</option>
+                </select>
+              </p>
+              <p id="precioItem">Precio: $800</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch7.jpg"
+              class="card-img-top"
+              alt="Buzo Sumo Negro"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Buzo Sumo Negro</h5>
+              <p class="card-text">
+                <label for="talle">Talle:</label>
+                <select name="talle" id="talle">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">ExtraLarge</option>
+                </select>
+              </p>
+              <p id="precioItem">Precio: $1500</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch13.png"
+              class="card-img-top"
+              alt="Mochila Sumo Negra"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mochila Sumo Negra</h5>
+              <p id="precioItem card-text">Precio: $1400</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch8.jpg"
+              class="card-img-top"
+              alt="Reloj Pared Luca"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Reloj Pared Luca</h5>
+              <p id="precioItem" class="card-text">Precio: $900</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row productos">
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img src="img/merch9.png"" class="card-img-top" alt="Poster Luca
+            Prodan">
+            <div class="card-body">
+              <h5 class="card-title">Poster Luca Prodan</h5>
+              <p id="precioItem" class="card-text">Precio: $600</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img src="img/merch10.jpg" class="card-img-top" alt="Taza Sumo" />
+            <div class="card-body">
+              <h5 class="card-title">Taza Sumo</h5>
+              <p id="precioItem" class="card-text">Precio: $450</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch11.jpg"
+              class="card-img-top"
+              alt="Taza Luca Prodan"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Taza Luca Prodan</h5>
+              <p id="precioItem" class="card-text">Precio: $450</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card item" style="width: 18rem">
+            <img
+              src="img/merch12.jpg"
+              class="card-img-top"
+              alt="Poster Sumo Rolling Stone"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Poster Sumo Rolling</h5>
+              <p id="precioItem" class="card-text">Precio: $650</p>
+              <a href="shopcart.html" class="btn btn-primary btnComprar"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="haciaArriba" data-aos="fade-left">
+      <a href="#top">
+        <img src="img/up.png" alt="Ir hacia arriba" />
+      </a>
+    </div>
+
+    <footer id="footer">
+      <div class="social">
+        <p>
+          <a
+            href="https://www.instagram.com/bandasumo/?hl=es-la"
+            target="_blank"
+            ><img
+              src="img/insta2.png"
+              alt="Logo Instagram"
+              class="social--instagram"
+          /></a>
+        </p>
+        <p>
+          <a
+            href="https://www.youtube.com/channel/UCZPNg1xzpmI62E09hvVPCMw/featured"
+            target="_blank"
+            ><img
+              src="img/youtube2.png"
+              alt="Logo Youtube"
+              class="social--youtube"
+          /></a>
+        </p>
+      </div>
+      <p class="twitter">
+        Autor de la página:
+        <a
+          href="https://twitter.com/peetersaanchez"
+          class="social"
+          target="_blank"
+          >Pedro Sanchez</a
+        >
+      </p>
+      <p>Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- scroll to top script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

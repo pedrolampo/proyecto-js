@@ -19,4 +19,5 @@ if (cart > 0) {
   alert(`Su compra tiene un total de $${cart}.`);
 }
 
+console.log(productos[0]['talleS']);
 alert('¡Gracias por su visita!');

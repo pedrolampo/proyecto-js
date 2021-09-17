@@ -1,9 +1,9 @@
 // Función agregar al carrito y calcular costo
 function addToCart(item, quantity) {
   switch (item) {
-    case 1: // Remera Negra
+    case 1:
       switch (talle) {
-        case 'S': // Talle Small
+        case 'S':
           if (stockAmount(quantity, productos[0]['talleS'])) {
             cart += quantity * productos[0]['precio'];
             productos[0]['talleS'] -= quantity;
@@ -11,10 +11,10 @@ function addToCart(item, quantity) {
           }
           break;
 
-        case 'M': // Talle Small
-          if (stockAmount(quantity, productos[1]['talleM'])) {
-            cart += quantity * productos[1]['precio'];
-            productos[1]['talleM'] -= quantity;
+        case 'M':
+          if (stockAmount(quantity, productos[0]['talleM'])) {
+            cart += quantity * productos[0]['precio'];
+            productos[0]['talleM'] -= quantity;
             alert('Item agregado al carrito.');
           }
           break;
@@ -40,17 +40,17 @@ function addToCart(item, quantity) {
       break;
 
     case 4:
-      if (stockAmount(quantity, PRODUCTO4.stock)) {
-        cart += quantity * PRODUCTO4.precio;
-        PRODUCTO4.stock -= quantity;
+      if (stockAmount(quantity, productos[4]['stock'])) {
+        cart += quantity * productos[4]['precio'];
+        productos[4]['stock'] -= quantity;
         alert('Item agregado al carrito.');
       }
       break;
 
     case 5:
-      if (stockAmount(quantity, PRODUCTO5.stock)) {
-        cart += quantity * PRODUCTO5.precio;
-        PRODUCTO5.stock -= quantity;
+      if (stockAmount(quantity, productos[5]['stock'])) {
+        cart += quantity * productos[5]['stock'];
+        productos[5]['stock'] -= quantity;
         alert('Item agregado al carrito.');
       }
       break;

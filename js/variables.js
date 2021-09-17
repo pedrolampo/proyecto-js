@@ -8,8 +8,26 @@ const menu = `Elija un producto, ingresando el número correspondiente:
 6. Salir
 `;
 
-// Constructor de los
-class Productos {
+const talles = `¿Qué talle quisiera?
+S - Small
+M - Medium
+L - Large
+XL - ExtraLarge`;
+
+// Constructor de los objetos para los productos
+class Remeras {
+  constructor(id, nombre, precio, talleS, talleM, talleL, talleXL) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.talleS = talleS;
+    this.talleM = talleM;
+    this.talleL = talleL;
+    this.talleXL = talleXL;
+  }
+}
+
+class OtrosProductos {
   constructor(id, nombre, precio, stock) {
     this.id = id;
     this.nombre = nombre;
@@ -18,12 +36,14 @@ class Productos {
   }
 }
 
+let productos = [];
+
 // Productos
-const PRODUCTO1 = new Productos(1, 'Remera Negra', 650, 100);
-const PRODUCTO2 = new Productos(2, 'Remera Blanca', 650, 90);
-const PRODUCTO3 = new Productos(3, 'Remera Azul', 650, 35);
-const PRODUCTO4 = new Productos(4, 'Mochila Sumo', 1400, 14);
-const PRODUCTO5 = new Productos(5, 'Taza Luca Prodan', 450, 50);
+productos.push(new Remeras(1, 'Remera Negra', 650, 20, 20, 20, 10));
+productos.push(new Remeras(2, 'Remera Blanca', 650, 40, 30, 40, 20));
+productos.push(new Remeras(3, 'Remera Azul', 650, 15, 33, 25, 10));
+productos.push(new OtrosProductos(4, 'Mochila Sumo', 1400, 14));
+productos.push(new OtrosProductos(5, 'Taza Luca Prodan', 450, 50));
 
 const selectedQuantity = '¿Qué cantidad deseas?';
 

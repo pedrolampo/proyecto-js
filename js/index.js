@@ -6,6 +6,8 @@ do {
     break;
   }
 
+  let talle = prompt(talles);
+
   let quantity = parseInt(prompt(selectedQuantity));
 
   addToCart(item, quantity);

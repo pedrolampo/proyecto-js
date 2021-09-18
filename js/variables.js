@@ -14,8 +14,6 @@ M - Medium
 L - Large
 XL - ExtraLarge`;
 
-let talle;
-
 // Constructor de los objetos para los productos
 class Remeras {
   constructor(id, nombre, precio, talleS, talleM, talleL, talleXL) {

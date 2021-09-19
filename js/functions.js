@@ -1,7 +1,7 @@
-// Función agregar al carrito y calcular costo
+// Función agregar al carrito y calcular costo total
 function addToCart(item, talle, quantity) {
   switch (item) {
-    case 1:
+    case 1: // Remera Negra
       switch (talle) {
         case 'S':
           if (stockAmount(quantity, productos[0]['talleS'])) {
@@ -34,10 +34,13 @@ function addToCart(item, talle, quantity) {
             alert('Item agregado al carrito.');
           }
           break;
+
+        default:
+          alert('Por favor elija una opción válida.');
       }
       break;
 
-    case 2:
+    case 2: // Remera Blanca
       switch (talle) {
         case 'S':
           if (stockAmount(quantity, productos[1]['talleS'])) {
@@ -70,10 +73,13 @@ function addToCart(item, talle, quantity) {
             alert('Item agregado al carrito.');
           }
           break;
+
+        default:
+          alert('Por favor elija una opción válida.');
       }
       break;
 
-    case 3:
+    case 3: // Remera Azul
       switch (talle) {
         case 'S':
           if (stockAmount(quantity, productos[2]['talleS'])) {
@@ -106,10 +112,13 @@ function addToCart(item, talle, quantity) {
             alert('Item agregado al carrito.');
           }
           break;
+
+        default:
+          alert('Por favor elija una opción válida.');
       }
       break;
 
-    case 4:
+    case 4: // Mochila Sumo
       if (stockAmount(quantity, productos[3]['stock'])) {
         cart += quantity * productos[3]['precio'];
         productos[3]['stock'] -= quantity;
@@ -117,7 +126,7 @@ function addToCart(item, talle, quantity) {
       }
       break;
 
-    case 5:
+    case 5: // Taza Luca Prodan
       if (stockAmount(quantity, productos[4]['stock'])) {
         cart += quantity * productos[4]['stock'];
         productos[4]['stock'] -= quantity;
@@ -139,11 +148,3 @@ const stockAmount = (quantity, stock) => {
     return true;
   }
 };
-
-// const size = () => {
-//   prompt(`¿Qué talle quisiera?
-//     S - Small
-//     M - Medium
-//     L - Large
-//     XL - ExtraLarge`);
-// };

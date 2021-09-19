@@ -14,7 +14,13 @@ M - Medium
 L - Large
 XL - ExtraLarge`;
 
-// Constructor de los objetos para los productos
+const selectedQuantity = '¿Qué cantidad deseas?';
+
+let cart = 0;
+
+let answer = 'Si';
+
+// Constructores de objetos para los productos
 class Remeras {
   constructor(id, nombre, precio, talleS, talleM, talleL, talleXL) {
     this.id = id;
@@ -36,17 +42,11 @@ class OtrosProductos {
   }
 }
 
+// Productos
 let productos = [];
 
-// Productos
 productos.push(new Remeras(1, 'Remera Negra', 650, 20, 20, 20, 10));
 productos.push(new Remeras(2, 'Remera Blanca', 650, 40, 30, 40, 20));
 productos.push(new Remeras(3, 'Remera Azul', 650, 15, 33, 25, 10));
 productos.push(new OtrosProductos(4, 'Mochila Sumo', 1400, 14));
 productos.push(new OtrosProductos(5, 'Taza Luca Prodan', 450, 50));
-
-const selectedQuantity = '¿Qué cantidad deseas?';
-
-let cart = 0;
-
-let answer = 'Si';

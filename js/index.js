@@ -6,8 +6,14 @@ do {
   if (item === 6) {
     break;
   }
+  if (item > 6) {
+    alert('Opción no válida.');
+    break;
+  }
 
-  talle = prompt(talles);
+  if (item < 4) {
+    talle = prompt(talles);
+  }
 
   let quantity = parseInt(prompt(selectedQuantity));
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumo - Carrito de Compras</title>
+    <meta name="keywords" content="Sumo, Rock, Punk, Reggae, Banda Argentina, Banda Sumo">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo4.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-xl navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logoedit.png" alt="Logo Sumo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navegacion" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link navButton" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButton" href="integrantes.html">INTEGRANTES</a>
+                    </li>
+                    <li class="nav-item" id="subMenu">
+                        <a class="nav-link navButton" href="discografia.html">DISCOGRAFIA</a>
+                        <ul class="subMenu">
+                            <li><a class="dropdown-item" href="discografia.html#corpiños">CORPIÑOS EN LA MADRUGADA</a></li>
+                            <li><a class="dropdown-item" href="discografia.html#divididos">DIVIDIDOS POR LA FELICIDAD</a></li>
+                            <li><a class="dropdown-item" href="discografia.html#monos">LLEGANDO LOS MONOS</a></li>
+                            <li><a class="dropdown-item" href="discografia.html#after">AFTER CHABON</a></li>
+                            <li><a class="dropdown-item" href="discografia.html#fiebre">FIEBRE</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButton" href="historia.html">HISTORIA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButton" href="productos.html">TIENDA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButton" href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <!-- banner de portada -->
+        <img src="img/portada3.jpg" alt="Foto Integrantes">
+    </div>
+
+    <section class="container-xl" id="carrito">
+        <!-- No Stock Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lo sentimos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        No disponemos de stock por el momento.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="location.href='productos.html#tituloTienda'">Regresar a la tienda</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopcart -->
+        <div class="carrito">
+            <h2>CARRITO DE COMPRAS</h2>
+            <div>
+                <p>Al parecer tu carrito está vacío.</p>
+                <p class="textoCarrito">Podés volver a la tienda haciendo click <a href="productos.html">acá</a> o seguir navegando por nuestra web!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <div id="haciaArriba" data-aos="fade-left">
+        <a href="#top">
+            <img src="img/up.png" alt="Ir hacia arriba">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="social">
+            <p><a href="https://www.instagram.com/bandasumo/?hl=es-la" target="_blank"><img src="img/insta2.png" alt="Logo Instagram" class="social--instagram"></a></p>
+            <p><a href="https://www.youtube.com/channel/UCZPNg1xzpmI62E09hvVPCMw/featured" target="_blank"><img src="img/youtube2.png" alt="Logo Youtube" class="social--youtube"></a></p>
+        </div>
+        <p class="twitter">Autor de la página: <a href="https://www.linkedin.com/in/pedro-sanchez-057317122/" class="social" target="_blank">Pedro Sanchez</a></p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- Bootstrap Script -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- scroll to top script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Modal pop up script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
+    </script>
+
+</body>
+</html>

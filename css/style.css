@@ -51,17 +51,25 @@ nav {
           color: white; }
         nav div.container-fluid div.navegacion ul.navbar-nav li.nav-item .navButton:hover {
           color: red; }
-      nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul {
-        background-color: black;
-        color: white;
-        margin-left: 1.5em;
-        font-size: .75em; }
-        nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul a {
+      nav div.container-fluid div.navegacion ul.navbar-nav #subMenu {
+        position: relative; }
+        nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu {
+          background-color: black;
           color: white;
-          transition: all .1s ease-in-out; }
-        nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul a:hover {
-          background-color: #1f1f1f;
-          color: red; }
+          font-size: .75em;
+          position: absolute;
+          display: none;
+          padding: 0 0 .5rem 0; }
+          nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu li {
+            display: block; }
+          nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu a {
+            color: white;
+            transition: all .1s ease-in-out; }
+          nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu a:hover {
+            background-color: #1f1f1f;
+            color: red; }
+      nav div.container-fluid div.navegacion ul.navbar-nav #subMenu:hover ul {
+        display: block; }
 
 /**** Portada ****/
 .banner {
@@ -133,7 +141,7 @@ nav {
         border-top-right-radius: 8px; }
         .main .articles .article a .imgArticle {
           width: 100%;
-          height: 200px;
+          height: 65%;
           border-top-left-radius: 8px;
           border-top-right-radius: 8px; }
         .main .articles .article a h3 {
@@ -234,9 +242,9 @@ nav {
 
 /**** Integrantes ****/
 #integrantes {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-bottom: 5em; }
   #integrantes .tituloMiembros {
     padding-top: 1em;
@@ -250,7 +258,6 @@ nav {
     grid-template-rows: repeat(3, 1fr); }
     #integrantes .miembros img {
       width: 23em;
-      height: 15em;
       grid-area: foto; }
     #integrantes .miembros div {
       display: grid;
@@ -297,7 +304,7 @@ nav {
 /**** Discografía ****/
 #discografia {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr 2fr;
   /** Discografía - Menú Discos **/
   /** Discografía - Lista de Canciones **/ }
   #discografia .discMenu {
@@ -348,6 +355,11 @@ nav {
     #discografia #songLists a:hover {
       color: red;
       text-decoration: underline; }
+  #discografia #portadas {
+    padding-top: 3rem; }
+    #discografia #portadas div img {
+      width: 80%;
+      padding: 5rem 2rem 4rem; }
 
 /**** Historia ****/
 #historia {
@@ -463,7 +475,7 @@ section#tienda .item {
     #carrito div.carrito div p.textoCarrito a {
       color: white; }
 
-/**** Desktop Small ****/
+/**** Laptop ****/
 @media screen and (max-width: 1500px) {
   html {
     width: 100%;
@@ -522,6 +534,10 @@ section#tienda .item {
     width: 20rem; }
     #discografia .discMenu .discTitle {
       font-size: 3rem; }
+  #discografia #portadas {
+    padding-top: 10rem; }
+    #discografia #portadas div img {
+      padding: 7rem 0 5rem; }
   /** Productos **/
   #tienda .productos {
     width: 90%;
@@ -541,6 +557,8 @@ section#tienda .item {
   nav {
     width: 100vw;
     height: auto; }
+    nav div.container-fluid div.navegacion ul.navbar-nav #subMenu:hover ul {
+      display: none; }
   .banner {
     margin: 0; }
   /** Index **/
@@ -594,21 +612,53 @@ section#tienda .item {
           margin: 0;
           padding: 0 0 1rem; }
         #integrantes .miembros div p {
-          text-align: justify; }
+          text-align: justify;
+          font-size: 1.2rem; }
         #integrantes .miembros div .wikipedia {
           padding-top: 3rem; }
   /** Discografia **/
-  .discMenu {
-    padding-left: 4rem;
-    width: 20em; }
-  .menuPos {
-    position: relative;
-    padding: 0;
-    top: 0; }
+  #discografia {
+    display: grid;
+    grid-template-columns: 1fr 4fr; }
+    #discografia .discMenu {
+      padding-left: 4rem;
+      width: 20em; }
+      #discografia .discMenu .menuPos {
+        position: relative;
+        padding: 0;
+        top: 0; }
+    #discografia #portadas {
+      display: none; }
+  /** Historia **/
+  #historia div.row {
+    display: block; }
+    #historia div.row .titulos-1 {
+      line-height: 5rem; }
+    #historia div.row .titulos-2 {
+      text-align: center;
+      padding-top: 3rem; }
+    #historia div.row div {
+      width: 100%; }
+      #historia div.row div img {
+        padding: 0 7rem 0; }
   /** Productos **/
-  div.productos {
+  #tienda {
     width: 90%;
-    padding-left: 15%; }
+    margin-left: 5%;
+    margin-right: 5%; }
+    #tienda div.productos {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      padding: 0;
+      margin: 0; }
+      #tienda div.productos div.col {
+        padding: 0 0 3rem;
+        margin: 0; }
+        #tienda div.productos div.col div.item {
+          margin: 0 auto;
+          padding: 0; }
   /** Contacto **/
   .form {
     width: 90%;
@@ -670,12 +720,15 @@ section#tienda .item {
       .lucaNotDead div .verMas {
         font-size: 1rem;
         padding: 0; }
-  .videos {
+  #videos #tituloVideos {
+    font-size: 2rem;
+    margin: 0 .5rem 0; }
+  #videos .videos {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     justify-items: center; }
-    .videos div {
+    #videos .videos div {
       width: 80%; }
   /** Integrantes **/
   #integrantes {
@@ -717,19 +770,44 @@ section#tienda .item {
       padding: 0 2rem 2rem 2rem;
       text-align: left; }
   /** Historia **/
-  .titulos {
-    line-height: 2.5rem; }
+  #historia div.row {
+    display: block; }
+    #historia div.row .titulos-1 {
+      line-height: 5rem; }
+    #historia div.row .titulos-2 {
+      text-align: center;
+      padding-top: 3rem; }
+    #historia div.row div {
+      width: 100%; }
+      #historia div.row div img {
+        padding: 0; }
   /** Productos **/
-  section #carouselExampleSlidesOnly {
-    display: none; }
-  #tienda .productos {
+  #tienda {
     width: 90%;
-    padding: 0; }
-    #tienda .productos .item {
-      margin: 0;
-      margin-left: -6%; }
+    margin-left: 5%;
+    margin-right: 5%; }
+    #tienda #carouselExampleSlidesOnly {
+      display: none; }
+    #tienda div.productos {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      padding: 0;
+      margin: 0; }
+      #tienda div.productos div.col {
+        padding: 0 0 3rem;
+        margin: 0; }
+        #tienda div.productos div.col div.item {
+          margin: 0 auto;
+          padding: 0; }
   /** Contacto **/
   .form {
     width: 94%;
     margin-left: 3%;
-    margin-right: 3%; } }
+    margin-right: 3%; }
+  /** Carrito **/
+  #carrito div.carrito h2 {
+    font-size: 3rem; }
+  #carrito div.carrito div p {
+    font-size: 1.5rem; } }

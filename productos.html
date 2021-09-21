@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,11 +28,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/estilos.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="img/logo4.ico" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
+
   <body>
+    <!-- Header -->
     <nav class="navbar navbar-expand-xl navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"
@@ -59,26 +61,11 @@
                 >INTEGRANTES</a
               >
             </li>
-            <li class="nav-item dropdown" id="subMenu">
-              <a
-                class="nav-link dropdown-toggle navButton"
-                href="discografia.html"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <li class="nav-item" id="subMenu">
+              <a class="nav-link navButton" href="discografia.html"
+                >DISCOGRAFIA</a
               >
-                DISCOGRAFIA
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a class="dropdown-item" href="discografia.html"
-                    >SU DISCOGRAFIA</a
-                  >
-                </li>
+              <ul class="subMenu">
                 <li>
                   <a class="dropdown-item" href="discografia.html#corpiños"
                     >CORPIÑOS EN LA MADRUGADA</a
@@ -128,10 +115,12 @@
     <section id="tienda" class="container-xl">
       <h1 id="tituloTienda">Nuestros Productos</h1>
 
+      <!-- Carrousel -->
       <div
         id="carouselExampleSlidesOnly"
         class="carousel slide"
         data-bs-ride="carousel"
+        data-bs-interval="3000"
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -158,6 +147,7 @@
         </div>
       </div>
 
+      <!-- Listado de productos -->
       <div class="row productos">
         <div class="col">
           <div class="card item" style="width: 18rem">
@@ -169,8 +159,8 @@
             <div class="card-body">
               <h5 class="card-title">Remera Sumo Negra</h5>
               <p class="card-text">
-                <label for="talle">Talle:</label>
-                <select name="talle" id="talle">
+                <label for="talle1">Talle:</label>
+                <select name="talle1" id="talle1">
                   <option value="S">Small</option>
                   <option value="M">Medium</option>
                   <option value="L">Large</option>
@@ -194,8 +184,8 @@
             <div class="card-body">
               <h5 class="card-title">Remera Sumo Blanca</h5>
               <p class="card-text">
-                <label for="talle">Talle:</label>
-                <select name="talle" id="talle">
+                <label for="talle2">Talle:</label>
+                <select name="talle2" id="talle2">
                   <option value="S">Small</option>
                   <option value="M">Medium</option>
                   <option value="L">Large</option>
@@ -219,8 +209,8 @@
             <div class="card-body">
               <h5 class="card-title">Remera After Chabón</h5>
               <p class="card-text">
-                <label for="talle">Talle:</label>
-                <select name="talle" id="talle">
+                <label for="talle3">Talle:</label>
+                <select name="talle3" id="talle3">
                   <option value="S">Small</option>
                   <option value="M">Medium</option>
                   <option value="L">Large</option>
@@ -244,8 +234,8 @@
             <div class="card-body">
               <h5 class="card-title">Remera Luca Azul</h5>
               <p class="card-text">
-                <label for="talle">Talle:</label>
-                <select name="talle" id="talle">
+                <label for="talle4">Talle:</label>
+                <select name="talle4" id="talle4">
                   <option value="S">Small</option>
                   <option value="M">Medium</option>
                   <option value="L">Large</option>
@@ -271,8 +261,8 @@
             <div class="card-body">
               <h5 class="card-title">Remera Luca Roja</h5>
               <p class="card-text">
-                <label for="talle">Talle:</label>
-                <select name="talle" id="talle">
+                <label for="talle5">Talle:</label>
+                <select name="talle5" id="talle5">
                   <option value="S">Small</option>
                   <option value="M">Medium</option>
                   <option value="L">Large</option>
@@ -296,8 +286,8 @@
             <div class="card-body">
               <h5 class="card-title">Buzo Sumo Negro</h5>
               <p class="card-text">
-                <label for="talle">Talle:</label>
-                <select name="talle" id="talle">
+                <label for="talle6">Talle:</label>
+                <select name="talle6" id="talle6">
                   <option value="S">Small</option>
                   <option value="M">Medium</option>
                   <option value="L">Large</option>
@@ -347,8 +337,11 @@
       <div class="row productos">
         <div class="col">
           <div class="card item" style="width: 18rem">
-            <img src="img/merch9.png"" class="card-img-top" alt="Poster Luca
-            Prodan">
+            <img
+              src="img/merch9.png"
+              class="card-img-top"
+              alt="Poster Luca Prodan"
+            />
             <div class="card-body">
               <h5 class="card-title">Poster Luca Prodan</h5>
               <p id="precioItem" class="card-text">Precio: $600</p>
@@ -405,12 +398,14 @@
       </div>
     </section>
 
+    <!-- Scroll to top button -->
     <div id="haciaArriba" data-aos="fade-left">
       <a href="#top">
         <img src="img/up.png" alt="Ir hacia arriba" />
       </a>
     </div>
 
+    <!-- Footer -->
     <footer id="footer">
       <div class="social">
         <p>
@@ -437,7 +432,7 @@
       <p class="twitter">
         Autor de la página:
         <a
-          href="https://twitter.com/peetersaanchez"
+          href="https://www.linkedin.com/in/pedro-sanchez-057317122/"
           class="social"
           target="_blank"
           >Pedro Sanchez</a
@@ -453,6 +448,7 @@
     <script>
       AOS.init();
     </script>
+
     <script src="js/variables.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/index.js"></script>

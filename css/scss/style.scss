@@ -699,6 +699,18 @@ section#tienda {
                 padding-top: 3rem;
             }
 
+            p.item {
+                @include tipografíaBase(
+                    $montserrat,
+                    1rem,
+                    null,
+                    $amarillo,
+                    null,
+                    null,
+                    null
+                );
+            }
+
             p.textoCarrito {
                 @include tipografíaBase(
                     $montserrat,

@@ -1,40 +1,53 @@
-@import "base/colores";
-@import "base/fuentes";
-@import "base/mixins";
+@import 'base/colores';
+@import 'base/fuentes';
+@import 'base/mixins';
 
-$social: (instagram: 35px, youtube: 30px);
+$social: (
+    instagram: 35px,
+    youtube: 30px,
+);
 
-html{
+html {
     background-color: $negro;
     scroll-behavior: smooth;
-    @include tipografíaBase($oswald, null, normal, $blanco, normal, null, null)
+    @include tipografíaBase($oswald, null, normal, $blanco, normal, null, null);
 }
 
-body{
+body {
     margin: 0;
     background: $negro;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(28,28,28,1) 35%, rgba(24,24,24,1) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(28, 28, 28, 1) 35%,
+        rgba(24, 24, 24, 1) 100%
+    );
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $oswald;
 }
 
-.oswald{
+.oswald {
     font-family: $oswald;
 }
 
-#haciaArriba{
+#haciaArriba {
     width: 50px;
     height: 45px;
     position: fixed;
     bottom: 4em;
     right: 3em;
     background-color: $cardColor;
-    padding: .2em;
+    padding: 0.2em;
     border-radius: 8px;
 
-    img{
+    img {
         width: 100%;
         height: 100%;
     }
@@ -42,67 +55,66 @@ h1, h2, h3, h4, h5, h6{
 
 /**** Header ****/
 
-nav{
+nav {
     background-color: $negro;
     font-family: $oswald;
     font-size: 1.5rem;
     border-bottom: 1px solid $blanco;
 
-    div.container-fluid{
+    div.container-fluid {
         padding: 1rem 3rem 1rem 0;
 
-        .logo{
+        .logo {
             width: 18rem;
             padding-left: 1.5em;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
-        
-        div.navegacion{
+
+        div.navegacion {
             justify-content: flex-end;
 
-            ul.navbar-nav{
-
-                li.nav-item{
+            ul.navbar-nav {
+                li.nav-item {
                     padding-left: 2rem;
 
-                    .navButton{
+                    .navButton {
                         color: $blanco;
                     }
 
-                    .navButton:hover{
+                    .navButton:hover {
                         color: $rojo;
                     }
                 }
 
-                #subMenu{
+                #subMenu {
                     position: relative;
 
-                    ul.subMenu{
+                    ul.subMenu {
                         background-color: $negro;
                         color: $blanco;
-                        font-size: .75em;
+                        font-size: 0.75em;
                         position: absolute;
                         display: none;
-                        padding: 0 0 .5rem 0;
+                        padding: 0 0 0.5rem 0;
 
-                        li{
+                        li {
                             display: block;
                         }
-            
-                        a{
+
+                        a {
                             color: $blanco;
-                            transition: all .1s ease-in-out;
+                            transition: all 0.1s ease-in-out;
                         }
-            
-                        a:hover{
+
+                        a:hover {
                             background-color: rgb(31, 31, 31);
                             color: $rojo;
                         }
                     }
                 }
 
-                #subMenu:hover{
-                    ul{
+                #subMenu:hover {
+                    ul {
                         display: block;
                     }
                 }
@@ -113,17 +125,17 @@ nav{
 
 /**** Portada ****/
 
-.banner{
+.banner {
     width: 100%;
 
-    img{
+    img {
         width: 100%;
     }
 }
 
 /**** Footer ****/
 
-#footer{
+#footer {
     font-weight: bold;
     width: 100%;
     padding: 2em 5em 1em;
@@ -137,35 +149,35 @@ nav{
     border-top: 1px solid $blanco;
     align-items: center;
 
-    div.social{
+    div.social {
         display: flex;
         flex-direction: row;
-        
+
         @each $red, $ancho in $social {
             .social--#{$red} {
                 width: $ancho;
             }
         }
 
-        .social--instagram{
+        .social--instagram {
             margin-top: -5px;
         }
     }
 
-    a{
+    a {
         color: $blanco;
         padding-right: 2em;
         text-decoration: none;
     }
 
-    .twitter{
+    .twitter {
         margin-left: 6.5em;
 
-        a{
+        a {
             padding-right: 0;
         }
 
-        a:hover{
+        a:hover {
             color: $rojo;
             text-decoration: underline;
         }
@@ -176,12 +188,12 @@ nav{
 
 /** Inicio - Cards **/
 
-.main{
+.main {
     width: 92%;
     margin-left: 4%;
     margin-right: 4%;
 
-    .mainTitle{
+    .mainTitle {
         font-size: 7rem;
         color: $rojo;
         text-transform: uppercase;
@@ -189,32 +201,32 @@ nav{
         padding-top: 1%;
     }
 
-    .articles{
+    .articles {
         text-align: left;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
         margin: 2rem 0 2rem;
 
-        .article{
+        .article {
             width: 20%;
             border-radius: 8px;
             background-color: $cardColor;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
 
-            a{
+            a {
                 text-decoration: none;
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
 
-                .imgArticle{
+                .imgArticle {
                     width: 100%;
                     height: 65%;
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
                 }
 
-                h3{
+                h3 {
                     width: 75%;
                     padding: 1em 5% 0;
                     font-size: 1.3rem;
@@ -223,19 +235,19 @@ nav{
                     color: $blanco;
                 }
 
-                .textoInfo{
+                .textoInfo {
                     width: 75%;
                     padding-left: 5%;
                     padding-right: 5%;
                     font-size: 1rem;
-                    letter-spacing: .7px;
+                    letter-spacing: 0.7px;
                     color: $amarillo;
                     font-weight: lighter;
                 }
             }
         }
 
-        .article:hover{
+        .article:hover {
             transform: scale(1.05);
         }
     }
@@ -243,75 +255,75 @@ nav{
 
 /** Inicio - Luca Not Dead **/
 
-.lucaNotDead{
+.lucaNotDead {
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
     padding-top: 3em;
     font-family: $oswald;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
 
-    img{
+    img {
         border-radius: 12px;
         width: 35em;
     }
 
-    div{
+    div {
         font-size: 3rem;
         text-transform: uppercase;
         text-align: center;
         color: $blanco;
-        padding: 1em 2em .5em;
+        padding: 1em 2em 0.5em;
         background-color: rgba(77, 77, 77, 0.13);
         border-radius: 8px;
     }
 
-    .añoLuca{
+    .añoLuca {
         font-size: 2.3rem;
         letter-spacing: 1px;
-        margin-top: -.5em;
+        margin-top: -0.5em;
     }
 
-    .verMas{
+    .verMas {
         text-align: center;
         text-transform: uppercase;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         font-size: 1.1rem;
         font-weight: bold;
         margin-bottom: 2.5em;
-    
-        a{
+
+        a {
             text-decoration: none;
             color: $negro;
             background-color: $blanco;
-            padding: .5rem 1.5rem .5rem;
+            padding: 0.5rem 1.5rem 0.5rem;
             border-radius: 8px;
-            transition: all .1s ease-in-out;
+            transition: all 0.1s ease-in-out;
         }
-        
-        a:hover{
+
+        a:hover {
             color: $blanco;
             background-color: rgb(216, 0, 0);
             letter-spacing: 1px;
         }
     }
-    
-    .verMas:hover{
+
+    .verMas:hover {
         transform: scale(1.1);
     }
 }
 
 /** Inicio - Videos **/
 
-#videos{
+#videos {
     background-image: url(../img/bkground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    #tituloVideos{
+
+    #tituloVideos {
         text-align: center;
         color: $rojo;
         font-size: 3rem;
@@ -319,28 +331,28 @@ nav{
         padding: 2em 0 1em;
     }
 
-    .videos{
+    .videos {
         width: 92%;
         margin: 0 4% 5em 4%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
 
-        div{
+        div {
             background-color: $cardColor;
             width: 35%;
             margin: 2rem 0 2rem;
             border-radius: 8px;
         }
 
-        iframe{
+        iframe {
             width: 100%;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
 
-        p{
-            padding: 1em 1em .5em;
+        p {
+            padding: 1em 1em 0.5em;
             font-family: $oswald;
             color: $amarillo;
         }
@@ -349,43 +361,43 @@ nav{
 
 /**** Integrantes ****/
 
-#integrantes{
+#integrantes {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     padding-bottom: 5em;
 
-    .tituloMiembros{
+    .tituloMiembros {
         padding-top: 1em;
-        padding-left: .3em;
+        padding-left: 0.3em;
         text-transform: uppercase;
         font-size: 3em;
         color: $amarillo;
     }
-    
-    .miembros{
+
+    .miembros {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-    
-        img{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        img {
             width: 23em;
             grid-area: foto;
         }
-    
-        div{
+
+        div {
             display: grid;
-            grid-template-areas: 
-                "nombre nombre"
-                "foto  biografía"
-                "foto  wikipedia";
-            grid-template-rows: .1fr 1fr;
+            grid-template-areas:
+                'nombre nombre'
+                'foto  biografía'
+                'foto  wikipedia';
+            grid-template-rows: 0.1fr 1fr;
             grid-template-columns: 23em 1fr;
             padding: 3em 1em 5em;
             justify-content: center;
         }
-    
-        p{
+
+        p {
             grid-area: biografía;
             font-family: $montserrat;
             text-align: left;
@@ -393,8 +405,8 @@ nav{
             padding: 0 2em 0;
             color: $blanco;
         }
-    
-        .nombre{
+
+        .nombre {
             grid-area: nombre;
             border-bottom: 1px solid $blanco;
             font-size: 2em;
@@ -402,29 +414,29 @@ nav{
             text-align: left;
             font-family: $oswald;
             margin-bottom: 2em;
-            padding: 0 0 .2em 0;
+            padding: 0 0 0.2em 0;
             letter-spacing: 1px;
             color: $amarillo;
         }
-    
-        .wikipedia{
+
+        .wikipedia {
             grid-area: wikipedia;
             justify-self: center;
             margin-top: -2em;
-    
-            a{
+
+            a {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $blanco;
                 background-color: $cardColor;
                 width: 4.65em;
                 height: 1em;
-                padding: .5em 1em .5em;
+                padding: 0.5em 1em 0.5em;
                 border-radius: 8px;
-                transition: all .2s;
+                transition: all 0.2s;
             }
-            
-            a:hover{
+
+            a:hover {
                 color: $rojo;
             }
         }
@@ -433,94 +445,97 @@ nav{
 
 /**** Discografía ****/
 
-#discografia{
+#discografia {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
 
     /** Discografía - Menú Discos **/
 
-    .discMenu{
+    .discMenu {
         padding-left: 2.5em;
         line-height: 30px;
         color: $blanco;
 
-        .discTitle{
+        .discTitle {
             font-size: 55px;
             text-transform: uppercase;
             color: $amarillo;
-            padding-top: .5em;
+            padding-top: 0.5em;
         }
 
-        #discos ul{
+        #discos ul {
             list-style-type: square;
             font-size: 18px;
             list-style-position: outside;
             font-family: $montserrat;
         }
 
-        a{
+        a {
             color: $blanco;
             text-decoration: none;
         }
-    
-        #discos a:hover{
+
+        #discos a:hover {
             color: rgb(143, 143, 143);
         }
-    
-        .menuPos{
+
+        .menuPos {
             position: sticky;
-            top: .5em;
+            top: 0.5em;
         }
     }
 
     /** Discografía - Lista de Canciones **/
 
-    #songLists{
+    #songLists {
         padding: 0 1em 1em 5em;
         color: $blanco;
 
-        ul{
+        ul {
             list-style-type: none;
             list-style-position: outside;
             font-family: $montserrat;
             font-size: 16px;
             line-height: 30px;
         }
-    
-        .corpiños, .divididos, .monos, .after, .fiebre{
+
+        .corpiños,
+        .divididos,
+        .monos,
+        .after,
+        .fiebre {
             padding-top: 3.5em;
         }
 
-        .divididos{
+        .divididos {
             display: block;
             padding-left: 0;
             margin: 0;
         }
-    
-        .lado2{
-            padding-top: .5em;
+
+        .lado2 {
+            padding-top: 0.5em;
         }
-    
-        a{
+
+        a {
             text-decoration: none;
             text-transform: uppercase;
             font-size: 30px;
             color: $amarillo;
             font-family: $oswald;
         }
-    
-        a:hover{
+
+        a:hover {
             color: $rojo;
             text-decoration: underline;
         }
     }
 
-    #portadas{
+    #portadas {
         padding-top: 3rem;
 
-        div{
-
-            img{
+        div {
+            img {
                 width: 80%;
                 padding: 5rem 2rem 4rem;
             }
@@ -530,12 +545,12 @@ nav{
 
 /**** Historia ****/
 
-#historia{
+#historia {
     font-family: $montserrat;
     padding: 1.5em;
     font-size: 16px;
     color: $blanco;
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
     line-height: 25px;
     text-align: justify;
 
@@ -546,58 +561,58 @@ nav{
             text-transform: uppercase;
         }
     }
-    
-    .frase{
+
+    .frase {
         display: block;
         padding: 1rem;
         text-align: center;
         text-transform: uppercase;
-        @include tipografíaBase($mate, 1.3rem, normal, $rojo, null, null, null)
+        @include tipografíaBase($mate, 1.3rem, normal, $rojo, null, null, null);
     }
 }
 
 /**** Contacto ****/
 
-section.form{
+section.form {
     color: $blanco;
     padding: 2rem 0 4rem;
 
-    h2{
+    h2 {
         text-transform: uppercase;
         color: $amarillo;
         font-size: 2.5rem;
     }
 
-    p{
+    p {
         font-size: 1rem;
         font-family: $montserrat;
         padding-top: 1rem;
     }
 
-    form{
+    form {
         width: 80%;
         margin: 0 auto;
 
-        .mensaje{
+        .mensaje {
             padding-top: 1.5rem;
 
-            span{
+            span {
                 align-items: flex-start;
             }
         }
 
-        #gridCheck:checked{
+        #gridCheck:checked {
             background-color: $rojo;
             border: none;
         }
-    
-        button{
+
+        button {
             background-color: $blanco;
             color: $negro;
             border: none;
         }
-    
-        button:hover{
+
+        button:hover {
             background-color: $rojo;
             border: none;
         }
@@ -606,9 +621,8 @@ section.form{
 
 /**** Productos ****/
 
-section#tienda{
-
-    #tituloTienda{
+section#tienda {
+    #tituloTienda {
         text-align: center;
         text-transform: uppercase;
         font-size: 3.5rem;
@@ -616,18 +630,18 @@ section#tienda{
         padding: 1em 0 1em;
     }
 
-    .col{
+    .col {
         padding: 1.3em;
     }
 
-    .item{
+    .item {
         border-radius: 10px;
         background-color: $cardColor;
         color: $amarillo;
         font-size: 1rem;
         height: 27em;
-    
-        img{
+
+        img {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             background-color: $blanco;
@@ -635,17 +649,16 @@ section#tienda{
             height: 16em;
         }
 
-        div.card-body{
-
-            .card-text{
-                margin-top: .7em;
-            }
-    
-            #precioItem{
-                margin-top: -.5em;
+        div.card-body {
+            .card-text {
+                margin-top: 0.7em;
             }
 
-            .btnComprar{
+            #precioItem {
+                margin-top: -0.5em;
+            }
+
+            .btnComprar {
                 margin-left: 4.5em;
                 background-color: $blanco;
                 color: $negro;
@@ -656,31 +669,49 @@ section#tienda{
 }
 
 /**** Carrito ****/
-#carrito{
-    #myModal{
-        h5{
-            font-family: $montserrat;
-        }
-    }
-
-    div.carrito{
+#carrito {
+    div.carrito {
         text-align: center;
-        h2{
-            @include tipografíaBase($oswald, 5rem, null, $amarillo, null, null, null);
-            padding-top: 2rem
+        h2 {
+            @include tipografíaBase(
+                $oswald,
+                5rem,
+                null,
+                $amarillo,
+                null,
+                null,
+                null
+            );
+            padding-top: 2rem;
         }
 
-        div{
-            p{
-                @include tipografíaBase($montserrat, 2rem, null, $blanco, null, null, null);
+        div {
+            p {
+                @include tipografíaBase(
+                    $montserrat,
+                    2rem,
+                    null,
+                    $blanco,
+                    null,
+                    null,
+                    null
+                );
                 padding-top: 3rem;
             }
 
-            p.textoCarrito{
-                @include tipografíaBase($montserrat, 1rem, null, $blanco, null, null, null);
+            p.textoCarrito {
+                @include tipografíaBase(
+                    $montserrat,
+                    1rem,
+                    null,
+                    $blanco,
+                    null,
+                    null,
+                    null
+                );
                 padding: 0 0 3rem;
 
-                a{
+                a {
                     color: $blanco;
                 }
             }
@@ -691,93 +722,92 @@ section#tienda{
 /**** Laptop ****/
 
 @media screen and (max-width: 1500px) {
-
-    html{
+    html {
         width: 100%;
         margin: 0;
     }
 
     /** Header **/
-    nav{
+    nav {
         font-size: 1.2rem;
         height: 6rem;
 
-        .logo{
+        .logo {
             width: 10rem;
         }
     }
 
     /** Index **/
-    section.main{
+    section.main {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
 
-        .articles{
+        .articles {
             display: flex;
             flex-flow: row wrap;
             grid-gap: 3rem;
 
-            .article{
+            .article {
                 width: 35%;
 
-                img{
+                img {
                     height: 15rem;
                 }
             }
         }
     }
 
-    .lucaNotDead{
+    .lucaNotDead {
         justify-content: space-between;
 
-        div{
+        div {
             padding: 2rem 1rem 0;
         }
     }
 
-    #videos{
-        div.videos{
+    #videos {
+        div.videos {
             width: 96%;
             margin-right: 2%;
             margin-left: 2%;
 
-            div{
+            div {
                 width: 40%;
             }
         }
     }
 
     /**Integrantes **/
-    #integrantes{
-        .tituloMiembros{
+    #integrantes {
+        .tituloMiembros {
             text-align: left;
-            padding: 2rem .3rem 0;
+            padding: 2rem 0.3rem 0;
         }
 
-        .miembros{
+        .miembros {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
-            div{
+            div {
                 display: grid;
-                grid-template-areas: 
-                    "nombre nombre"
-                    "foto foto"
-                    "biografía biografía"
-                    "wikipedia wikipedia";
-                grid-template-rows: .1fr 1fr;
-                grid-template-columns: .5fr 1fr;
-                padding: 3rem .5rem 2rem;
+                grid-template-areas:
+                    'nombre nombre'
+                    'foto foto'
+                    'biografía biografía'
+                    'wikipedia wikipedia';
+                grid-template-rows: 0.1fr 1fr;
+                grid-template-columns: 0.5fr 1fr;
+                padding: 3rem 0.5rem 2rem;
                 justify-content: center;
 
-                img{
+                img {
                     width: 100%;
                     padding: 0 6rem 1rem;
                     margin-top: -3rem;
                 }
 
-                .wikipedia{
+                .wikipedia {
                     margin-top: 1rem;
                 }
             }
@@ -785,19 +815,19 @@ section#tienda{
     }
 
     /** Discografía **/
-    #discografia{
-        .discMenu{
+    #discografia {
+        .discMenu {
             width: 20rem;
 
-            .discTitle{
+            .discTitle {
                 font-size: 3rem;
             }
         }
 
-        #portadas{
+        #portadas {
             padding-top: 10rem;
-            div{
-                img{
+            div {
+                img {
                     padding: 7rem 0 5rem;
                 }
             }
@@ -805,13 +835,13 @@ section#tienda{
     }
 
     /** Productos **/
-    #tienda{
-        .productos{
+    #tienda {
+        .productos {
             width: 90%;
             margin-left: 7%;
             margin-right: 3%;
 
-            .item{
+            .item {
                 margin: 0 3rem 0;
             }
         }
@@ -821,29 +851,25 @@ section#tienda{
 /**** Tablet ****/
 
 @media screen and (max-width: 1024px) {
-
-    html{
+    html {
         width: 100vw;
         margin: 0;
     }
 
-    #haciaArriba{
+    #haciaArriba {
         display: none;
     }
 
     /** Header **/
-    nav{
+    nav {
         width: 100vw;
         height: auto;
 
-        div.container-fluid{
-            
-            div.navegacion{
-    
-                ul.navbar-nav{
-                    
-                    #subMenu:hover{
-                        ul{
+        div.container-fluid {
+            div.navegacion {
+                ul.navbar-nav {
+                    #subMenu:hover {
+                        ul {
                             display: none;
                         }
                     }
@@ -852,20 +878,20 @@ section#tienda{
         }
     }
 
-    .banner{
+    .banner {
         margin: 0;
     }
-    
+
     /** Index **/
-    section.main{
-        .articles{
+    section.main {
+        .articles {
             display: grid;
-            grid-template-rows: repeat(2,40%);
-            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2, 40%);
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 3em;
             justify-items: center;
 
-            .article{
+            .article {
                 width: 95%;
                 height: 22em;
                 margin-bottom: 3em;
@@ -873,29 +899,29 @@ section#tienda{
         }
     }
 
-    #videos{
-        div.videos{
+    #videos {
+        div.videos {
             display: grid;
-            grid-template-columns: repeat(1,1fr);
-            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             justify-items: center;
 
-            div{
+            div {
                 width: 80%;
             }
         }
     }
 
-    .lucaNotDead{
+    .lucaNotDead {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: repeat(2, 1fr);
         padding-top: 0;
 
-        div{
+        div {
             padding: 4rem 3rem 0;
-            
-            .verMas{
+
+            .verMas {
                 font-size: 25px;
                 font-weight: normal;
                 padding-bottom: 0;
@@ -905,41 +931,41 @@ section#tienda{
     }
 
     /** Integrantes **/
-    #integrantes{
+    #integrantes {
         width: 90%;
         margin: 0 5% 0;
 
-        .tituloMiembros{
+        .tituloMiembros {
             text-align: center;
         }
 
-        .miembros{
+        .miembros {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-evenly;
 
-            div{
+            div {
                 display: grid;
-                grid-template-areas: 
-                    "nombre nombre"
-                    "foto biografía"
-                    "wikipedia wikipedia";
-                grid-template-rows: .1fr 1fr;
-                grid-template-columns: .5fr 1fr;
+                grid-template-areas:
+                    'nombre nombre'
+                    'foto biografía'
+                    'wikipedia wikipedia';
+                grid-template-rows: 0.1fr 1fr;
+                grid-template-columns: 0.5fr 1fr;
                 padding: 3rem 0 2rem;
                 justify-content: center;
 
-                img{
+                img {
                     margin: 0;
                     padding: 0 0 1rem;
                 }
 
-                p{
+                p {
                     text-align: justify;
                     font-size: 1.2rem;
                 }
 
-                .wikipedia{
+                .wikipedia {
                     padding-top: 3rem;
                 }
             }
@@ -947,44 +973,44 @@ section#tienda{
     }
 
     /** Discografia **/
-    #discografia{
+    #discografia {
         display: grid;
         grid-template-columns: 1fr 4fr;
 
-        .discMenu{
+        .discMenu {
             padding-left: 4rem;
             width: 20em;
 
-            .menuPos{
+            .menuPos {
                 position: relative;
                 padding: 0;
                 top: 0;
             }
         }
 
-        #portadas{
+        #portadas {
             display: none;
         }
     }
 
     /** Historia **/
-    #historia{
-        div.row{
+    #historia {
+        div.row {
             display: block;
 
-            .titulos-1{
+            .titulos-1 {
                 line-height: 5rem;
             }
 
-            .titulos-2{
+            .titulos-2 {
                 text-align: center;
                 padding-top: 3rem;
             }
 
-            div{
+            div {
                 width: 100%;
 
-                img{
+                img {
                     padding: 0 7rem 0;
                 }
             }
@@ -992,12 +1018,12 @@ section#tienda{
     }
 
     /** Productos **/
-    #tienda{
+    #tienda {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
 
-        div.productos{
+        div.productos {
             width: 100%;
             display: flex;
             flex-flow: column wrap;
@@ -1005,11 +1031,11 @@ section#tienda{
             padding: 0;
             margin: 0;
 
-            div.col{
+            div.col {
                 padding: 0 0 3rem;
                 margin: 0;
 
-                div.item{
+                div.item {
                     margin: 0 auto;
                     padding: 0;
                 }
@@ -1018,7 +1044,7 @@ section#tienda{
     }
 
     /** Contacto **/
-    .form{
+    .form {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
@@ -1029,149 +1055,155 @@ section#tienda{
 /**** Mobile ****/
 
 @media screen and (max-width: 600px) {
-
-    html{
+    html {
         width: 100vw;
         margin: 0;
     }
 
-    #haciaArriba{
+    #haciaArriba {
         display: none;
     }
 
     /** Nav **/
-    nav{
+    nav {
         width: 100vw;
 
-        div.container-fluid{
-                .logo{
-                    width: 12rem;
-                }
+        div.container-fluid {
+            .logo {
+                width: 12rem;
+            }
         }
     }
 
-    .banner{
+    .banner {
         display: none;
     }
 
     /** Footer **/
-    #footer{
+    #footer {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         justify-items: center;
         text-align: center;
 
-        div{
+        div {
             padding-left: 2.5rem;
         }
 
-        .twitter{
+        .twitter {
             margin: 0;
         }
     }
-    
-    /** Index **/
-    section.main{
 
-        .mainTitle{
+    /** Index **/
+    section.main {
+        .mainTitle {
             font-size: 5rem;
             margin-top: 1rem;
         }
 
-        .articles{
+        .articles {
             display: grid;
-            grid-template-rows: repeat(4,1fr);
-            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-gap: 2em;
             justify-items: center;
 
-            .article{
+            .article {
                 width: 80%;
                 height: 22rem;
             }
         }
     }
 
-    .lucaNotDead{
+    .lucaNotDead {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
 
-        img{
+        img {
             width: 80%;
         }
 
-        div{
+        div {
             padding: 2.5rem 2rem 0;
 
-            .añoLuca{
+            .añoLuca {
                 font-size: 1.5rem;
             }
 
-            .verMas{
+            .verMas {
                 font-size: 1rem;
                 padding: 0;
             }
 
-            @include tipografíaBase(null, 2rem, normal, $blanco, null, null, null)
+            @include tipografíaBase(
+                null,
+                2rem,
+                normal,
+                $blanco,
+                null,
+                null,
+                null
+            );
         }
     }
 
-    #videos{
-        #tituloVideos{
+    #videos {
+        #tituloVideos {
             font-size: 2rem;
-            margin: 0 .5rem 0;
+            margin: 0 0.5rem 0;
         }
 
-        .videos{
+        .videos {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(4,1fr);
+            grid-template-rows: repeat(4, 1fr);
             justify-items: center;
-    
-            div{
+
+            div {
                 width: 80%;
             }
         }
     }
 
     /** Integrantes **/
-    #integrantes{
+    #integrantes {
         width: 90%;
         margin: 0 5% 0;
 
-        .tituloMiembros{
+        .tituloMiembros {
             text-align: center;
         }
 
-        .miembros{
+        .miembros {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-evenly;
 
-            div{
+            div {
                 display: grid;
-                grid-template-areas: 
-                    "nombre nombre"
-                    "foto foto"
-                    "biografía biografía"
-                    "wikipedia wikipedia";
-                grid-template-rows: .1fr 1fr;
-                grid-template-columns: .5fr 1fr;
+                grid-template-areas:
+                    'nombre nombre'
+                    'foto foto'
+                    'biografía biografía'
+                    'wikipedia wikipedia';
+                grid-template-rows: 0.1fr 1fr;
+                grid-template-columns: 0.5fr 1fr;
                 padding: 3rem 0 2rem;
                 justify-content: center;
 
-                img{
+                img {
                     margin: 0;
                     padding: 0 0 1rem;
                 }
 
-                p{
+                p {
                     text-align: justify;
                 }
 
-                .wikipedia{
+                .wikipedia {
                     padding-top: 3rem;
                 }
             }
@@ -1179,7 +1211,7 @@ section#tienda{
     }
 
     /** Discografía **/
-    #discografia{
+    #discografia {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
@@ -1189,34 +1221,34 @@ section#tienda{
         justify-items: center;
         text-align: center;
 
-        .discMenu{
+        .discMenu {
             display: none;
         }
-    
-        #songLists{
+
+        #songLists {
             padding: 0 2rem 2rem 2rem;
             text-align: left;
         }
     }
 
     /** Historia **/
-    #historia{
-        div.row{
+    #historia {
+        div.row {
             display: block;
 
-            .titulos-1{
+            .titulos-1 {
                 line-height: 5rem;
             }
 
-            .titulos-2{
+            .titulos-2 {
                 text-align: center;
                 padding-top: 3rem;
             }
 
-            div{
+            div {
                 width: 100%;
 
-                img{
+                img {
                     padding: 0;
                 }
             }
@@ -1224,16 +1256,16 @@ section#tienda{
     }
 
     /** Productos **/
-    #tienda{
+    #tienda {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
 
-        #carouselExampleSlidesOnly{
+        #carouselExampleSlidesOnly {
             display: none;
         }
 
-        div.productos{
+        div.productos {
             width: 100%;
             display: flex;
             flex-flow: column wrap;
@@ -1241,11 +1273,11 @@ section#tienda{
             padding: 0;
             margin: 0;
 
-            div.col{
+            div.col {
                 padding: 0 0 3rem;
                 margin: 0;
 
-                div.item{
+                div.item {
                     margin: 0 auto;
                     padding: 0;
                 }
@@ -1254,20 +1286,20 @@ section#tienda{
     }
 
     /** Contacto **/
-    .form{
+    .form {
         width: 94%;
         margin-left: 3%;
         margin-right: 3%;
     }
 
     /** Carrito **/
-    #carrito{
-        div.carrito{
-            h2{
+    #carrito {
+        div.carrito {
+            h2 {
                 font-size: 3rem;
             }
-            div{
-                p{
+            div {
+                p {
                     font-size: 1.5rem;
                 }
             }

@@ -1,219 +1,382 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sumo - Discografía</title>
+        <meta
+            name="description"
+            content="La discografía completa de la banda argentina de rock Sumo."
+        />
+        <meta
+            name="keywords"
+            content="Sumo, Rock, Punk, Reggae, Banda Argentina, Banda Sumo"
+        />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="bootstrap-5.0.2-dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="img/logo4.ico" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumo - Discografía</title>
-    <meta name="description" content="La discografía completa de la banda argentina de rock Sumo.">
-    <meta name="keywords" content="Sumo, Rock, Punk, Reggae, Banda Argentina, Banda Sumo">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/logo4.ico">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-xl navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="img/logoedit.png" alt="Logo Sumo" class="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navegacion" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link navButton" href="index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navButton" href="integrantes.html">INTEGRANTES</a>
-                    </li>
-                    <li class="nav-item" id="subMenu">
-                        <a class="nav-link navButton" href="discografia.html">DISCOGRAFIA</a>
-                        <ul class="subMenu">
-                            <li><a class="dropdown-item" href="discografia.html#corpiños">CORPIÑOS EN LA MADRUGADA</a></li>
-                            <li><a class="dropdown-item" href="discografia.html#divididos">DIVIDIDOS POR LA FELICIDAD</a></li>
-                            <li><a class="dropdown-item" href="discografia.html#monos">LLEGANDO LOS MONOS</a></li>
-                            <li><a class="dropdown-item" href="discografia.html#after">AFTER CHABON</a></li>
-                            <li><a class="dropdown-item" href="discografia.html#fiebre">FIEBRE</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navButton" href="historia.html">HISTORIA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navButton" href="productos.html">TIENDA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navButton" href="contacto.html">CONTACTO</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="banner">
-        <!-- banner de portada -->
-        <img src="img/portada4.jpg" alt="Foto Integrantes">
-    </div>
-
-    <section id="discografia">
-        <!-- Menú Discos -->
-        <section class="discMenu">
-            <div class="menuPos">
-                <h2 class="discTitle">Sus discos</h2>
-                <div id="discos">
-                    <ul>
-                        <li><a href="#corpiños">Corpiños en la Madrugada</a></li>
-                        <li><a href="#divididos">Divididos por la Felicidad</a></li>
-                        <li><a href="#monos">Llegando los Monos</a></li>
-                        <li><a href="#after">After Chabón</a></li>
-                        <li><a href="#fiebre">Fiebre</a></li>
+    <body>
+        <!-- Header -->
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"
+                    ><img src="img/logoedit.png" alt="Logo Sumo" class="logo"
+                /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse navegacion"
+                    id="navbarNavDropdown"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navButton" href="index.html"
+                                >INICIO</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link navButton"
+                                href="integrantes.html"
+                                >INTEGRANTES</a
+                            >
+                        </li>
+                        <li class="nav-item" id="subMenu">
+                            <a
+                                class="nav-link navButton"
+                                href="discografia.html"
+                                >DISCOGRAFIA</a
+                            >
+                            <ul class="subMenu">
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="discografia.html#corpiños"
+                                        >CORPIÑOS EN LA MADRUGADA</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="discografia.html#divididos"
+                                        >DIVIDIDOS POR LA FELICIDAD</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="discografia.html#monos"
+                                        >LLEGANDO LOS MONOS</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="discografia.html#after"
+                                        >AFTER CHABON</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="discografia.html#fiebre"
+                                        >FIEBRE</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navButton" href="historia.html"
+                                >HISTORIA</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navButton" href="productos.html"
+                                >TIENDA</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navButton" href="contacto.html"
+                                >CONTACTO</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </nav>
 
-        <!-- Lista de Canciones -->
-        <section id="songLists">
-            <ul>
-                <li class="corpiños">
-                    <h3 id="corpiños"><a href="https://www.youtube.com/watch?v=kgatR7kwmtc" target="_blank">Corpiños en la Madrugada (Demo)</a></h3>
-                    <p>Lado 1</p>
-                    <ol>
-                        <li>Night and Day</li>
-                        <li>Mejor no hablar (de ciertas cosas)</li>
-                        <li>Banderitas y globos</li>
-                        <li>Teléfonos que suenan en piezas vacías/White Trash</li>
-                    </ol>
-                    <p class="lado2">Lado 2</p>
-                    <ol>
-                        <li>Una noche en New York City</li>
-                        <li>Divididos por la felicidad</li>
-                        <li>Quiero dinero</li>
-                        <li>F*** you</li>
-                        <li>Disco Baby Disco (De Be De)</li>
-                        <li>Heroin</li>
-                    </ol>
-                </li>
-                <li class="divididos">
-                    <h3 id="divididos"><a href="https://www.youtube.com/watch?v=XsnEvlXmK0E&ab_channel=Capit%C3%A1nFugitivo" target="_blank">Divididos por la Felicidad</a></h3>
-                    <ol>
-                        <li>La Rubia Tarada</li>
-                        <li>Mula Plateada</li>
-                        <li>No Acabes</li>
-                        <li>Regtest</li>
-                        <li>Reggae de Paz y Amor</li>
-                        <li>Debede</li>
-                        <li>Mejor no Hablar de Ciertas Cosas</li>
-                        <li>Divididos por la Felicidad</li>
-                        <li>No duermas más</li>
-                        <li>Kaya</li>
-                    </ol>
-                </li>
-                <li class="monos">
-                    <h3 id="monos"><a href="https://www.youtube.com/watch?v=V2Ze2jTT35w&ab_channel=gonzaagg" target="_blank">Llegando los Monos</a></h3>
-                    <ol>
-                        <li>Llegando los Monos</li>
-                        <li>El ojo blindado</li>
-                        <li>Estallando desde el Océano</li>
-                        <li>TV Caliente</li>
-                        <li>NextWeek</li>
-                        <li>Cinco Magníficos</li>
-                        <li>Rollando</li>
-                        <li>Los viejos vinagres</li>
-                        <li>No Good</li>
-                        <li>Heroin</li>
-                        <li>Que me pisen</li>
-                        <li>Llegando los Monos (reprise)</li>
-                    </ol>
-                </li>
-                <li class="after">
-                    <h3 id="after"><a href="https://www.youtube.com/watch?v=QBkUXQxbt8U&ab_channel=Siro" target="_blank">After Chabón</a></h3>
-                    <ol>
-                        <li>Crua Chan</li>
-                        <li>No tan distintos</li>
-                        <li>Banderitas y globos</li>
-                        <li>Mañana en el Abasto</li>
-                        <li>Hola Frank</li>
-                        <li>Ojos de Terciopelo</li>
-                        <li>Lo quiero ya</li>
-                        <li>La gota en el ojo</li>
-                        <li>El cieguito volador</li>
-                        <li>No te pongas azul</li>
-                        <li>Noche de paz</li>
-                        <li>Percusion baby</li>
-                    </ol>
-                </li>
-                <li class="fiebre">
-                    <h3 id="fiebre"><a href="https://www.youtube.com/watch?v=q5uhQnXMB5U&ab_channel=gonzaagg" target="_blank">Fiebre</a></h3>
-                    <ol>
-                        <li>Déjame en paz</li>
-                        <li>Cállate Mark</li>
-                        <li>Crua Chan</li>
-                        <li>Al repalazo</li>
-                        <li>Fiebre</li>
-                        <li>Brilla tu luz para mí</li>
-                        <li>Aquí vienen los blue jeans</li>
-                        <li>No más nada</li>
-                        <li>Cuerdas, gargantas y cables</li>
-                        <li>Pinini Reggae</li>
-                    </ol>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Videos -->
-        <section id="portadas">
-            <div>
-                <img src="img/corpiños.jpg" alt="Portada Corpiños en la Madrugada" class="portadaCorpinios">
-            </div>
-            <div>
-                <img src="img/divididos.jpg" alt="Portada Divididos por la Felicidad" class="portadaDivididos">
-            </div>
-            <div>
-                <img src="img/monos.jpg" alt="Portada Llegando los Monos" class="portadaMonos">
-            </div>
-            <div>
-                <img src="img/after.jpg" alt="Portada After Chabón" class="portadaAfter">
-            </div>
-            <div>
-                <img src="img/fiebre.jpg" alt="Portada Fiebre" class="portadaFiebre">
-            </div>
-        </section>
-    </section>
-
-    <!-- Scroll to top button -->
-    <div id="haciaArriba" data-aos="fade-left">
-        <a href="#top">
-            <img src="img/up.png" alt="Ir hacia arriba">
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="social">
-            <p><a href="https://www.instagram.com/bandasumo/?hl=es-la" target="_blank"><img src="img/insta2.png" alt="Logo Instagram" class="social--instagram"></a></p>
-            <p><a href="https://www.youtube.com/channel/UCZPNg1xzpmI62E09hvVPCMw/featured" target="_blank"><img src="img/youtube2.png" alt="Logo Youtube" class="social--youtube"></a></p>
+        <div class="banner">
+            <!-- banner de portada -->
+            <img src="img/portada4.jpg" alt="Foto Integrantes" />
         </div>
-        <p class="twitter">Autor de la página: <a href="https://www.linkedin.com/in/pedro-sanchez-057317122/" class="social" target="_blank">Pedro Sanchez</a></p>
-        <p>Todos los derechos reservados.</p>
-    </footer>
-    
-    <!-- Bootstrap Script -->
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <!-- scroll to top script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
-</body>
+        <section id="discografia">
+            <!-- Menú Discos -->
+            <section class="discMenu">
+                <div class="menuPos">
+                    <h2 class="discTitle">Sus discos</h2>
+                    <div id="discos">
+                        <ul>
+                            <li>
+                                <a href="#corpiños">Corpiños en la Madrugada</a>
+                            </li>
+                            <li>
+                                <a href="#divididos"
+                                    >Divididos por la Felicidad</a
+                                >
+                            </li>
+                            <li><a href="#monos">Llegando los Monos</a></li>
+                            <li><a href="#after">After Chabón</a></li>
+                            <li><a href="#fiebre">Fiebre</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lista de Canciones -->
+            <section id="songLists">
+                <ul>
+                    <li class="corpiños">
+                        <h3 id="corpiños">
+                            <a
+                                href="https://www.youtube.com/watch?v=kgatR7kwmtc"
+                                target="_blank"
+                                >Corpiños en la Madrugada (Demo)</a
+                            >
+                        </h3>
+                        <p>Lado 1</p>
+                        <ol>
+                            <li>Night and Day</li>
+                            <li>Mejor no hablar (de ciertas cosas)</li>
+                            <li>Banderitas y globos</li>
+                            <li>
+                                Teléfonos que suenan en piezas vacías/White
+                                Trash
+                            </li>
+                        </ol>
+                        <p class="lado2">Lado 2</p>
+                        <ol>
+                            <li>Una noche en New York City</li>
+                            <li>Divididos por la felicidad</li>
+                            <li>Quiero dinero</li>
+                            <li>F*** you</li>
+                            <li>Disco Baby Disco (De Be De)</li>
+                            <li>Heroin</li>
+                        </ol>
+                    </li>
+                    <li class="divididos">
+                        <h3 id="divididos">
+                            <a
+                                href="https://www.youtube.com/watch?v=XsnEvlXmK0E&ab_channel=Capit%C3%A1nFugitivo"
+                                target="_blank"
+                                >Divididos por la Felicidad</a
+                            >
+                        </h3>
+                        <ol>
+                            <li>La Rubia Tarada</li>
+                            <li>Mula Plateada</li>
+                            <li>No Acabes</li>
+                            <li>Regtest</li>
+                            <li>Reggae de Paz y Amor</li>
+                            <li>Debede</li>
+                            <li>Mejor no Hablar de Ciertas Cosas</li>
+                            <li>Divididos por la Felicidad</li>
+                            <li>No duermas más</li>
+                            <li>Kaya</li>
+                        </ol>
+                    </li>
+                    <li class="monos">
+                        <h3 id="monos">
+                            <a
+                                href="https://www.youtube.com/watch?v=V2Ze2jTT35w&ab_channel=gonzaagg"
+                                target="_blank"
+                                >Llegando los Monos</a
+                            >
+                        </h3>
+                        <ol>
+                            <li>Llegando los Monos</li>
+                            <li>El ojo blindado</li>
+                            <li>Estallando desde el Océano</li>
+                            <li>TV Caliente</li>
+                            <li>NextWeek</li>
+                            <li>Cinco Magníficos</li>
+                            <li>Rollando</li>
+                            <li>Los viejos vinagres</li>
+                            <li>No Good</li>
+                            <li>Heroin</li>
+                            <li>Que me pisen</li>
+                            <li>Llegando los Monos (reprise)</li>
+                        </ol>
+                    </li>
+                    <li class="after">
+                        <h3 id="after">
+                            <a
+                                href="https://www.youtube.com/watch?v=QBkUXQxbt8U&ab_channel=Siro"
+                                target="_blank"
+                                >After Chabón</a
+                            >
+                        </h3>
+                        <ol>
+                            <li>Crua Chan</li>
+                            <li>No tan distintos</li>
+                            <li>Banderitas y globos</li>
+                            <li>Mañana en el Abasto</li>
+                            <li>Hola Frank</li>
+                            <li>Ojos de Terciopelo</li>
+                            <li>Lo quiero ya</li>
+                            <li>La gota en el ojo</li>
+                            <li>El cieguito volador</li>
+                            <li>No te pongas azul</li>
+                            <li>Noche de paz</li>
+                            <li>Percusion baby</li>
+                        </ol>
+                    </li>
+                    <li class="fiebre">
+                        <h3 id="fiebre">
+                            <a
+                                href="https://www.youtube.com/watch?v=q5uhQnXMB5U&ab_channel=gonzaagg"
+                                target="_blank"
+                                >Fiebre</a
+                            >
+                        </h3>
+                        <ol>
+                            <li>Déjame en paz</li>
+                            <li>Cállate Mark</li>
+                            <li>Crua Chan</li>
+                            <li>Al repalazo</li>
+                            <li>Fiebre</li>
+                            <li>Brilla tu luz para mí</li>
+                            <li>Aquí vienen los blue jeans</li>
+                            <li>No más nada</li>
+                            <li>Cuerdas, gargantas y cables</li>
+                            <li>Pinini Reggae</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Videos -->
+            <section id="portadas">
+                <div>
+                    <img
+                        src="img/corpiños.jpg"
+                        alt="Portada Corpiños en la Madrugada"
+                        class="portadaCorpinios"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="img/divididos.jpg"
+                        alt="Portada Divididos por la Felicidad"
+                        class="portadaDivididos"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="img/monos.jpg"
+                        alt="Portada Llegando los Monos"
+                        class="portadaMonos"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="img/after.jpg"
+                        alt="Portada After Chabón"
+                        class="portadaAfter"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="img/fiebre.jpg"
+                        alt="Portada Fiebre"
+                        class="portadaFiebre"
+                    />
+                </div>
+            </section>
+        </section>
+
+        <!-- Scroll to top button -->
+        <div id="haciaArriba" data-aos="fade-left">
+            <a href="#top">
+                <img src="img/up.png" alt="Ir hacia arriba" />
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="social">
+                <p>
+                    <a
+                        href="https://www.instagram.com/bandasumo/?hl=es-la"
+                        target="_blank"
+                        ><img
+                            src="img/insta2.png"
+                            alt="Logo Instagram"
+                            class="social--instagram"
+                    /></a>
+                </p>
+                <p>
+                    <a
+                        href="https://www.youtube.com/channel/UCZPNg1xzpmI62E09hvVPCMw/featured"
+                        target="_blank"
+                        ><img
+                            src="img/youtube2.png"
+                            alt="Logo Youtube"
+                            class="social--youtube"
+                    /></a>
+                </p>
+            </div>
+            <p class="twitter">
+                Autor de la página:
+                <a
+                    href="https://www.linkedin.com/in/pedro-sanchez-057317122/"
+                    class="social"
+                    target="_blank"
+                    >Pedro Sanchez</a
+                >
+            </p>
+            <p>Todos los derechos reservados.</p>
+        </footer>
+
+        <!-- Bootstrap Script -->
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <!-- scroll to top script -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 </html>

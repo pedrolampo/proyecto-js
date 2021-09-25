@@ -12,7 +12,12 @@ body {
   background: black;
   background: linear-gradient(180deg, black 0%, #1c1c1c 35%, #181818 100%); }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Oswald", sans-serif; }
 
 .oswald {
@@ -25,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 4em;
   right: 3em;
   background-color: #2c2c2c;
-  padding: .2em;
+  padding: 0.2em;
   border-radius: 8px; }
   #haciaArriba img {
     width: 100%;
@@ -42,7 +47,7 @@ nav {
     nav div.container-fluid .logo {
       width: 18rem;
       padding-left: 1.5em;
-      transition: all .3s ease-in-out; }
+      transition: all 0.3s ease-in-out; }
     nav div.container-fluid div.navegacion {
       justify-content: flex-end; }
       nav div.container-fluid div.navegacion ul.navbar-nav li.nav-item {
@@ -56,15 +61,15 @@ nav {
         nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu {
           background-color: black;
           color: white;
-          font-size: .75em;
+          font-size: 0.75em;
           position: absolute;
           display: none;
-          padding: 0 0 .5rem 0; }
+          padding: 0 0 0.5rem 0; }
           nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu li {
             display: block; }
           nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu a {
             color: white;
-            transition: all .1s ease-in-out; }
+            transition: all 0.1s ease-in-out; }
           nav div.container-fluid div.navegacion ul.navbar-nav #subMenu ul.subMenu a:hover {
             background-color: #1f1f1f;
             color: red; }
@@ -134,7 +139,7 @@ nav {
       width: 20%;
       border-radius: 8px;
       background-color: #2c2c2c;
-      transition: all .2s ease-in-out; }
+      transition: all 0.2s ease-in-out; }
       .main .articles .article a {
         text-decoration: none;
         border-top-left-radius: 8px;
@@ -156,7 +161,7 @@ nav {
           padding-left: 5%;
           padding-right: 5%;
           font-size: 1rem;
-          letter-spacing: .7px;
+          letter-spacing: 0.7px;
           color: #FC3;
           font-weight: lighter; }
     .main .articles .article:hover {
@@ -181,17 +186,17 @@ nav {
     text-transform: uppercase;
     text-align: center;
     color: white;
-    padding: 1em 2em .5em;
+    padding: 1em 2em 0.5em;
     background-color: rgba(77, 77, 77, 0.13);
     border-radius: 8px; }
   .lucaNotDead .añoLuca {
     font-size: 2.3rem;
     letter-spacing: 1px;
-    margin-top: -.5em; }
+    margin-top: -0.5em; }
   .lucaNotDead .verMas {
     text-align: center;
     text-transform: uppercase;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 2.5em; }
@@ -199,9 +204,9 @@ nav {
       text-decoration: none;
       color: black;
       background-color: white;
-      padding: .5rem 1.5rem .5rem;
+      padding: 0.5rem 1.5rem 0.5rem;
       border-radius: 8px;
-      transition: all .1s ease-in-out; }
+      transition: all 0.1s ease-in-out; }
     .lucaNotDead .verMas a:hover {
       color: white;
       background-color: #d80000;
@@ -236,7 +241,7 @@ nav {
       border-top-left-radius: 8px;
       border-top-right-radius: 8px; }
     #videos .videos p {
-      padding: 1em 1em .5em;
+      padding: 1em 1em 0.5em;
       font-family: "Oswald", sans-serif;
       color: #FC3; }
 
@@ -248,7 +253,7 @@ nav {
   padding-bottom: 5em; }
   #integrantes .tituloMiembros {
     padding-top: 1em;
-    padding-left: .3em;
+    padding-left: 0.3em;
     text-transform: uppercase;
     font-size: 3em;
     color: #FC3; }
@@ -261,8 +266,8 @@ nav {
       grid-area: foto; }
     #integrantes .miembros div {
       display: grid;
-      grid-template-areas: "nombre nombre" "foto  biografía" "foto  wikipedia";
-      grid-template-rows: .1fr 1fr;
+      grid-template-areas: 'nombre nombre' 'foto  biografía' 'foto  wikipedia';
+      grid-template-rows: 0.1fr 1fr;
       grid-template-columns: 23em 1fr;
       padding: 3em 1em 5em;
       justify-content: center; }
@@ -281,7 +286,7 @@ nav {
       text-align: left;
       font-family: "Oswald", sans-serif;
       margin-bottom: 2em;
-      padding: 0 0 .2em 0;
+      padding: 0 0 0.2em 0;
       letter-spacing: 1px;
       color: #FC3; }
     #integrantes .miembros .wikipedia {
@@ -295,9 +300,9 @@ nav {
         background-color: #2c2c2c;
         width: 4.65em;
         height: 1em;
-        padding: .5em 1em .5em;
+        padding: 0.5em 1em 0.5em;
         border-radius: 8px;
-        transition: all .2s; }
+        transition: all 0.2s; }
       #integrantes .miembros .wikipedia a:hover {
         color: red; }
 
@@ -315,7 +320,7 @@ nav {
       font-size: 55px;
       text-transform: uppercase;
       color: #FC3;
-      padding-top: .5em; }
+      padding-top: 0.5em; }
     #discografia .discMenu #discos ul {
       list-style-type: square;
       font-size: 18px;
@@ -328,7 +333,7 @@ nav {
       color: #8f8f8f; }
     #discografia .discMenu .menuPos {
       position: sticky;
-      top: .5em; }
+      top: 0.5em; }
   #discografia #songLists {
     padding: 0 1em 1em 5em;
     color: white; }
@@ -338,14 +343,18 @@ nav {
       font-family: "Montserrat", sans-serif;
       font-size: 16px;
       line-height: 30px; }
-    #discografia #songLists .corpiños, #discografia #songLists .divididos, #discografia #songLists .monos, #discografia #songLists .after, #discografia #songLists .fiebre {
+    #discografia #songLists .corpiños,
+    #discografia #songLists .divididos,
+    #discografia #songLists .monos,
+    #discografia #songLists .after,
+    #discografia #songLists .fiebre {
       padding-top: 3.5em; }
     #discografia #songLists .divididos {
       display: block;
       padding-left: 0;
       margin: 0; }
     #discografia #songLists .lado2 {
-      padding-top: .5em; }
+      padding-top: 0.5em; }
     #discografia #songLists a {
       text-decoration: none;
       text-transform: uppercase;
@@ -367,7 +376,7 @@ nav {
   padding: 1.5em;
   font-size: 16px;
   color: white;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 25px;
   text-align: justify; }
   #historia .titulos-1 {
@@ -442,9 +451,9 @@ section#tienda .item {
     width: auto;
     height: 16em; }
   section#tienda .item div.card-body .card-text {
-    margin-top: .7em; }
+    margin-top: 0.7em; }
   section#tienda .item div.card-body #precioItem {
-    margin-top: -.5em; }
+    margin-top: -0.5em; }
   section#tienda .item div.card-body .btnComprar {
     margin-left: 4.5em;
     background-color: white;
@@ -452,9 +461,6 @@ section#tienda .item {
     border: black; }
 
 /**** Carrito ****/
-#carrito #myModal h5 {
-  font-family: "Montserrat", sans-serif; }
-
 #carrito div.carrito {
   text-align: center; }
   #carrito div.carrito h2 {
@@ -512,16 +518,16 @@ section#tienda .item {
   /**Integrantes **/
   #integrantes .tituloMiembros {
     text-align: left;
-    padding: 2rem .3rem 0; }
+    padding: 2rem 0.3rem 0; }
   #integrantes .miembros {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
     #integrantes .miembros div {
       display: grid;
-      grid-template-areas: "nombre nombre" "foto foto" "biografía biografía" "wikipedia wikipedia";
-      grid-template-rows: .1fr 1fr;
-      grid-template-columns: .5fr 1fr;
-      padding: 3rem .5rem 2rem;
+      grid-template-areas: 'nombre nombre' 'foto foto' 'biografía biografía' 'wikipedia wikipedia';
+      grid-template-rows: 0.1fr 1fr;
+      grid-template-columns: 0.5fr 1fr;
+      padding: 3rem 0.5rem 2rem;
       justify-content: center; }
       #integrantes .miembros div img {
         width: 100%;
@@ -603,9 +609,9 @@ section#tienda .item {
       justify-content: space-evenly; }
       #integrantes .miembros div {
         display: grid;
-        grid-template-areas: "nombre nombre" "foto biografía" "wikipedia wikipedia";
-        grid-template-rows: .1fr 1fr;
-        grid-template-columns: .5fr 1fr;
+        grid-template-areas: 'nombre nombre' 'foto biografía' 'wikipedia wikipedia';
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
         padding: 3rem 0 2rem;
         justify-content: center; }
         #integrantes .miembros div img {
@@ -722,7 +728,7 @@ section#tienda .item {
         padding: 0; }
   #videos #tituloVideos {
     font-size: 2rem;
-    margin: 0 .5rem 0; }
+    margin: 0 0.5rem 0; }
   #videos .videos {
     display: grid;
     grid-template-columns: 1fr;
@@ -742,9 +748,9 @@ section#tienda .item {
       justify-content: space-evenly; }
       #integrantes .miembros div {
         display: grid;
-        grid-template-areas: "nombre nombre" "foto foto" "biografía biografía" "wikipedia wikipedia";
-        grid-template-rows: .1fr 1fr;
-        grid-template-columns: .5fr 1fr;
+        grid-template-areas: 'nombre nombre' 'foto foto' 'biografía biografía' 'wikipedia wikipedia';
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
         padding: 3rem 0 2rem;
         justify-content: center; }
         #integrantes .miembros div img {

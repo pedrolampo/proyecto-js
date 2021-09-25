@@ -22,24 +22,24 @@ let answer = 'Si';
 
 // Constructores de objetos para los productos
 class Remeras {
-  constructor(id, nombre, precio, talleS, talleM, talleL, talleXL) {
-    this.id = id;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.talleS = talleS;
-    this.talleM = talleM;
-    this.talleL = talleL;
-    this.talleXL = talleXL;
-  }
+    constructor(id, nombre, precio, talleS, talleM, talleL, talleXL) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.talleS = talleS;
+        this.talleM = talleM;
+        this.talleL = talleL;
+        this.talleXL = talleXL;
+    }
 }
 
 class OtrosProductos {
-  constructor(id, nombre, precio, stock) {
-    this.id = id;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.stock = stock;
-  }
+    constructor(id, nombre, precio, stock) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
 }
 
 // Productos

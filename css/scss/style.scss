@@ -709,6 +709,22 @@ section#tienda {
                     null,
                     null
                 );
+                padding: 0;
+                display: inline;
+            }
+
+            p.cantidad {
+                @include tipografíaBase(
+                    $montserrat,
+                    1rem,
+                    null,
+                    $amarillo,
+                    null,
+                    null,
+                    null
+                );
+                padding: 0;
+                display: inline;
             }
 
             p.textoCarrito {

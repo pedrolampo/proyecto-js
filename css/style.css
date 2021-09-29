@@ -476,7 +476,15 @@ section#tienda .item {
   #carrito div.carrito div p.item {
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    color: #FC3; }
+    color: #FC3;
+    padding: 0;
+    display: inline; }
+  #carrito div.carrito div p.cantidad {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #FC3;
+    padding: 0;
+    display: inline; }
   #carrito div.carrito div p.textoCarrito {
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;

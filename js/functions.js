@@ -139,6 +139,8 @@ function addToCart(item, talle, quantity) {
     }
 }
 
+// Nuevo Carrito
+
 // Verifica si hay stock suficiente
 const stockAmount = (quantity, stock) => {
     if (quantity > stock) {
@@ -148,40 +150,3 @@ const stockAmount = (quantity, stock) => {
         return true;
     }
 };
-
-function carrito(producto, cantidad) {
-    let productoAgregado = document.createElement('p');
-    let cantidadAgregada = document.createElement('p');
-    let item;
-
-    switch (producto) {
-        case 1:
-            item = 'Remera Negra';
-            break;
-
-        case 2:
-            item = 'Remera Blanca';
-            break;
-
-        case 3:
-            item = 'Remera Azul';
-            break;
-
-        case 4:
-            item = 'Mochila de Sumo';
-            break;
-
-        case 5:
-            item = 'Taza de Luca Prodan';
-            break;
-
-        default:
-            break;
-    }
-
-    productoAgregado.innerHTML = `<p id="carritoTest"> Producto agregado: ${item} </p>`;
-    cantidadAgregada.innerHTML = `<p id="carritoTest"> Cantidad: ${cantidad} </p`;
-
-    document.body.appendChild(productoAgregado);
-    document.body.appendChild(cantidadAgregada);
-}

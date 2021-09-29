@@ -428,10 +428,6 @@ section.form {
       border: none; }
 
 /**** Productos ****/
-p#carritoTest {
-  color: white;
-  font-size: 1.3rem; }
-
 section#tienda #tituloTienda {
   text-align: center;
   text-transform: uppercase;

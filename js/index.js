@@ -19,6 +19,8 @@ do {
 
     addToCart(item, talle, quantity);
 
+    carrito(item, quantity);
+
     answer = prompt('¿Desea agregar algo más al carrito? Si/No');
 } while (answer === 'Si' || answer === 'si' || answer === 'SI');
 

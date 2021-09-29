@@ -148,3 +148,12 @@ const stockAmount = (quantity, stock) => {
         return true;
     }
 };
+
+function carrito(producto, cantidad) {
+    let productoAgregado = document.createElement('p');
+    let cantidadAgregada = document.createElement('p');
+    productoAgregado.innerHTML = `<p class="carritoTest"> Producto agregado: ${producto} </p>`;
+    cantidadAgregada.innerHTML = `<p class="carritoTest"> Cantidad: ${cantidad} </p`;
+    document.body.appendChild(productoAgregado);
+    document.body.appendChild(cantidadAgregada);
+}

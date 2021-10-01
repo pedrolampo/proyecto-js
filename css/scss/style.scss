@@ -629,6 +629,34 @@ section#tienda {
         padding: 1em 0 1em;
     }
 
+    .cartQty {
+        width: 9rem;
+        margin-top: 2.5rem;
+        margin-left: 82%;
+        background-color: $blanco;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid;
+        transition: all 0.2s ease-in-out;
+
+        a {
+            text-decoration: none;
+            @include tipografíaBase(
+                $oswald,
+                2rem,
+                null,
+                $negro,
+                null,
+                null,
+                null
+            );
+        }
+    }
+
+    .cartQty:hover {
+        transform: scale(1.1);
+    }
+
     .col {
         padding: 1.3em;
     }
@@ -671,49 +699,158 @@ section#tienda {
 #carrito {
     div.carrito {
         text-align: center;
-        h2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 70%;
+        margin: 0 auto;
+        justify-content: space-around;
+
+        .headerProductos {
+            width: 100%;
+            display: flex;
+            text-align: left;
+            border-bottom: 2px solid $blanco;
+            margin: 0 auto;
+            color: $amarillo;
+
+            .tituloProducto {
+                width: 47%;
+                font-size: 1.5rem;
+            }
+
+            .precio {
+                width: 15%;
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+            }
+
+            .cantidad {
+                width: 25%;
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+            }
+
+            .total {
+                width: 10%;
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+            }
+        }
+
+        .carritoProductos {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .cartRow {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .producto {
+                    width: 46%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0.5rem 0;
+                    font-size: 1rem;
+                    border-bottom: 1px solid $blanco;
+
+                    img {
+                        width: 8rem;
+                        margin: 0 0.5rem;
+                    }
+
+                    .delete {
+                        width: 2rem;
+                        cursor: pointer;
+                        margin: 0 0.5rem;
+                    }
+
+                    span {
+                        color: $blanco;
+                        margin: 0 0.5rem;
+                    }
+                }
+
+                .precio,
+                .cantidad {
+                    font-size: 1rem;
+                    color: $blanco;
+                    margin: 0 1rem;
+
+                    img {
+                        width: 3rem;
+                        cursor: pointer;
+                        margin: 0 0.5rem;
+                    }
+                }
+
+                .cantidad {
+                    width: 20%;
+
+                    .cantidadInput {
+                        width: 3rem;
+                        text-align: center;
+                    }
+                }
+
+                .total {
+                    font-size: 1rem;
+                    color: $blanco;
+                    margin: 0 0 0 5rem;
+                }
+            }
+
+            .montoTotal {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                padding: 1rem 1rem;
+                font-size: 10rem;
+                color: $blanco;
+
+                .totalTitulo {
+                    width: 40%;
+                    font-size: 2rem;
+                }
+
+                .totalCompra {
+                    width: 15%;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .cartQty {
+        width: 9rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        background-color: $blanco;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid;
+        transition: all 0.2s ease-in-out;
+
+        a {
+            text-decoration: none;
             @include tipografíaBase(
                 $oswald,
-                5rem,
+                2rem,
                 null,
-                $amarillo,
+                $negro,
                 null,
                 null,
                 null
             );
-            padding-top: 2rem;
-        }
-
-        div {
-            p {
-                @include tipografíaBase(
-                    $montserrat,
-                    2rem,
-                    null,
-                    $blanco,
-                    null,
-                    null,
-                    null
-                );
-                padding-top: 3rem;
-            }
-
-            p.textoCarrito {
-                @include tipografíaBase(
-                    $montserrat,
-                    1rem,
-                    null,
-                    $blanco,
-                    null,
-                    null,
-                    null
-                );
-                padding: 0 0 3rem;
-
-                a {
-                    color: $blanco;
-                }
-            }
         }
     }
 }
@@ -1017,10 +1154,16 @@ section#tienda {
     }
 
     /** Productos **/
-    #tienda {
+    section#tienda {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
+
+        .cartQty {
+            margin: 0 auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
 
         div.productos {
             width: 100%;
@@ -1039,6 +1182,15 @@ section#tienda {
                     padding: 0;
                 }
             }
+        }
+    }
+
+    /** Carrito **/
+    section#carrito {
+        .cartQty {
+            margin: 0 auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
     }
 

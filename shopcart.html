@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sumo - Carrito de Compras</title>
         <meta
+            name="description"
+            content="Carrito de compras de la tienda no-oficial de la banda Sumo."
+        />
+        <meta
             name="keywords"
             content="Sumo, Rock, Punk, Reggae, Banda Argentina, Banda Sumo"
         />
@@ -142,15 +146,18 @@
         <!-- Main Content -->
         <section class="container-xl" id="carrito">
             <!-- Shopcart -->
+            <p class="cartQty">
+                <a href="shopcart.html">Carrito: <span>0</span></a>
+            </p>
             <div class="carrito">
-                <h2>CARRITO DE COMPRAS</h2>
-                <div>
-                    <p>Al parecer tu carrito está vacío.</p>
-                    <p class="textoCarrito">
-                        Podés volver a la tienda haciendo click
-                        <a href="productos.html">acá</a> o seguir navegando por
-                        nuestra web!
-                    </p>
+                <div class="headerProductos">
+                    <h5 class="tituloProducto">PRODUCTO</h5>
+                    <h5 class="precio">PRECIO</h5>
+                    <h5 class="cantidad">CANTIDAD</h5>
+                    <h5 class="total">TOTAL</h5>
+                </div>
+                <div class="carritoProductos">
+                    <div class="producto"></div>
                 </div>
             </div>
         </section>
@@ -205,5 +212,8 @@
         <script>
             AOS.init();
         </script>
+
+        <script src="js/functions.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

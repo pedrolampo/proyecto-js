@@ -9,4 +9,4 @@ for (let i = 0; i < cart.length; i++) {
 
 cartQtyNumber();
 cartDisplay();
-removeItem();
+cartUpdate();

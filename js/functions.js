@@ -71,6 +71,7 @@ const cartDisplay = () => {
                         src="img/delete.png"
                         alt="eliminar item"
                         class="delete"
+                        id="${item.id}"
                     />
                     <img src="img/${item.id}.jpg" alt="${item.nombre}" />
                     <span>${item.nombre}</span>
@@ -101,17 +102,46 @@ const cartDisplay = () => {
     }
 };
 
-const removeItem = () => {
+const cartUpdate = () => {
     let deleteItemButton = document.getElementsByClassName('delete');
-    let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
+    let quantityInput = document.getElementsByClassName('cantidadInput');
 
     for (let i = 0; i < deleteItemButton.length; i++) {
         let button = deleteItemButton[i];
-        button.addEventListener('click', function (e) {
-            let buttonClicked = e.target;
-            buttonClicked.parentElement.parentElement.remove();
+        button.addEventListener('click', removeItem);
+    }
 
-            console.log(cartItems); // Acá quiero eliminar el item y volver a pushear al localStorage
-        });
+    for (let i = 0; i < quantityInput.length; i++) {
+        let input = quantityInput[i];
+        input.addEventListener('change', quantityChanged);
+    }
+};
+
+const removeItem = (e) => {
+    let buttonClicked = e.target;
+    buttonClicked.parentElement.parentElement.remove();
+
+    let productsInCart = JSON.parse(localStorage.getItem('productsInCart'));
+    delete productsInCart[buttonClicked.id];
+    productsInCart = JSON.stringify(productsInCart);
+    localStorage.setItem('productsInCart', productsInCart);
+
+    // Estaba probando, no me juzgues
+
+    // let totalCost = parseFloat(localStorage.getItem('totalPrice'));
+    // totalCost -= 100;
+    // console.log(totalCost);
+    // localStorage.setItem('totalPrice', totalCost);
+
+    // let cartQty = localStorage.getItem('cartQuantity');
+    // cartQty -= 1;
+    // console.log(cartQty);
+    // localStorage.setItem('cartQuantity', cartQty);
+};
+
+const quantityChanged = (e) => {
+    let input = e.target;
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
     }
 };

@@ -76,13 +76,15 @@ const cartDisplay = () => {
                     <img src="img/${item.id}.jpg" alt="${item.nombre}" />
                     <span>${item.nombre}</span>
                 </div>
-                <div class="precio">$${item.precio},00</div>  
+                <div class="precio">$${item.precio},00</div>
                 <div class="cantidad">
-                    <input class="cantidadInput" type="number" value="${
-                        item.inCart
-                    }">
-                </div>   
-                <div class="total">
+                    <input id="input${
+                        item.id
+                    }" class="cantidadInput" type="number" value="${
+                item.inCart
+            }">
+                </div>
+                <div id="price${item.id}" class="total">
                     $${item.inCart * item.precio},00
                 </div>
             </div>
@@ -108,6 +110,16 @@ const cartUpdate = () => {
 
     for (let i = 0; i < deleteItemButton.length; i++) {
         let button = deleteItemButton[i];
+        button.addEventListener('click', updateCartQty);
+    }
+
+    for (let i = 0; i < deleteItemButton.length; i++) {
+        let button = deleteItemButton[i];
+        button.addEventListener('click', updateTotalAmout);
+    }
+
+    for (let i = 0; i < deleteItemButton.length; i++) {
+        let button = deleteItemButton[i];
         button.addEventListener('click', removeItem);
     }
 
@@ -125,18 +137,25 @@ const removeItem = (e) => {
     delete productsInCart[buttonClicked.id];
     productsInCart = JSON.stringify(productsInCart);
     localStorage.setItem('productsInCart', productsInCart);
+};
 
-    // Estaba probando, no me juzgues
+const updateCartQty = (e) => {
+    let buttonClicked = e.target;
+    let cartQty = localStorage.getItem('cartQuantity');
+    let itemId = `input${buttonClicked.id}`;
+    let itemQty = document.getElementById(itemId).value;
+    cartQty -= itemQty;
+    localStorage.setItem('cartQuantity', cartQty);
+};
 
-    // let totalCost = parseFloat(localStorage.getItem('totalPrice'));
-    // totalCost -= 100;
-    // console.log(totalCost);
-    // localStorage.setItem('totalPrice', totalCost);
-
-    // let cartQty = localStorage.getItem('cartQuantity');
-    // cartQty -= 1;
-    // console.log(cartQty);
-    // localStorage.setItem('cartQuantity', cartQty);
+const updateTotalAmout = (e) => {
+    let buttonClicked = e.target;
+    let totalAmount = parseInt(localStorage.getItem('totalPrice'));
+    let priceId = `price${buttonClicked.id}`;
+    let price = document.getElementById(priceId).innerHTML;
+    price = parseInt(price.replace('$', '').replace(',00', ''));
+    totalAmount -= price;
+    localStorage.setItem('totalPrice', totalAmount);
 };
 
 const quantityChanged = (e) => {

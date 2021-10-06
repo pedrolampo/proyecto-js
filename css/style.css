@@ -544,7 +544,8 @@ section#tienda .item {
       #carrito div.carrito .carritoProductos .cartRow .cantidad {
         font-size: 1rem;
         color: white;
-        margin: 0 1rem; }
+        margin: 0 1rem;
+        width: 10%; }
         #carrito div.carrito .carritoProductos .cartRow .precio img,
         #carrito div.carrito .carritoProductos .cartRow .cantidad img {
           width: 3rem;

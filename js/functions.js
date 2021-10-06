@@ -163,4 +163,10 @@ const quantityChanged = (e) => {
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
+
+    let total = document.getElementById('price1');
+    let price = productos[0].precio;
+    let newTotal = input.value * price;
+    console.log(newTotal);
+    total.innerHTML = `$${newTotal},00`;
 };

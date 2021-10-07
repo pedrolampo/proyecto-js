@@ -88,7 +88,7 @@ const cartDisplay = () => {
                 item.inCart
             }">
                 </div>
-                <div id="price${item.id}" class="total">
+                <div id="price${item.id}" class="total totalProd">
                     $${item.inCart * item.precio},00
                 </div>
             </div>
@@ -152,6 +152,8 @@ const updateTotalAmout = (e) => {
     price = parseInt(price.replace('$', '').replace(',00', ''));
     totalAmount -= price;
     localStorage.setItem('totalPrice', totalAmount);
+    let total = document.getElementsByClassName('totalCompra')[0];
+    total.textContent = `$${totalAmount},00`;
 };
 
 const removeItem = (e) => {
@@ -162,6 +164,8 @@ const removeItem = (e) => {
     delete productsInCart[buttonClicked.id];
     productsInCart = JSON.stringify(productsInCart);
     localStorage.setItem('productsInCart', productsInCart);
+
+    totalAmountUpdated();
 };
 
 const quantityChanged = (e) => {
@@ -173,6 +177,25 @@ const quantityChanged = (e) => {
     let total = document.getElementById('price1');
     let price = productos[0].precio;
     let newTotal = input.value * price;
-    console.log(newTotal);
     total.innerHTML = `$${newTotal},00`;
+
+    totalAmountUpdated();
+};
+
+const totalAmountUpdated = () => {
+    let total = document.getElementsByClassName('totalCompra')[0];
+    let productsTotalPrice = document.getElementsByClassName('totalProd');
+    let sum = 0;
+
+    for (precio of productsTotalPrice) {
+        let precioProd = precio.innerText;
+        precioProd = parseInt(precioProd.replace('$', '').replace(',00', ''));
+        sum += precioProd;
+    }
+
+    if (total) {
+        total.textContent = `$${sum},00`;
+    }
+
+    localStorage.setItem('totalPrice', sum);
 };

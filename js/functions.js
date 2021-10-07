@@ -1,3 +1,4 @@
+// Actualiza el número de items en el carrito según se agreguen
 const cartQtyNumber = () => {
     let productsQuantity = localStorage.getItem('cartQuantity');
 
@@ -22,6 +23,7 @@ const cartQuantity = (product) => {
     setItems(product);
 };
 
+// Agrega los productos del carrito al carrito
 const setItems = (product) => {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -44,6 +46,7 @@ const setItems = (product) => {
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 };
 
+// Actualiza el costo total en el localStorage
 const totalCost = (product) => {
     let cartAmount = localStorage.getItem('totalPrice');
 
@@ -55,6 +58,7 @@ const totalCost = (product) => {
     }
 };
 
+// Crea y muestra los divs en la página de carrito
 const cartDisplay = () => {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -104,6 +108,7 @@ const cartDisplay = () => {
     }
 };
 
+// Actualiza costos, productos en el carrito, y elimina del DOM el producto seleccionado
 const cartUpdate = () => {
     let deleteItemButton = document.getElementsByClassName('delete');
     let quantityInput = document.getElementsByClassName('cantidadInput');
@@ -129,16 +134,7 @@ const cartUpdate = () => {
     }
 };
 
-const removeItem = (e) => {
-    let buttonClicked = e.target;
-    buttonClicked.parentElement.parentElement.remove();
-
-    let productsInCart = JSON.parse(localStorage.getItem('productsInCart'));
-    delete productsInCart[buttonClicked.id];
-    productsInCart = JSON.stringify(productsInCart);
-    localStorage.setItem('productsInCart', productsInCart);
-};
-
+// Funciones correspondientes a los eventos de eliminar del carrito
 const updateCartQty = (e) => {
     let buttonClicked = e.target;
     let cartQty = localStorage.getItem('cartQuantity');
@@ -156,6 +152,16 @@ const updateTotalAmout = (e) => {
     price = parseInt(price.replace('$', '').replace(',00', ''));
     totalAmount -= price;
     localStorage.setItem('totalPrice', totalAmount);
+};
+
+const removeItem = (e) => {
+    let buttonClicked = e.target;
+    buttonClicked.parentElement.parentElement.remove();
+
+    let productsInCart = JSON.parse(localStorage.getItem('productsInCart'));
+    delete productsInCart[buttonClicked.id];
+    productsInCart = JSON.stringify(productsInCart);
+    localStorage.setItem('productsInCart', productsInCart);
 };
 
 const quantityChanged = (e) => {

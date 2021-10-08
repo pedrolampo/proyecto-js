@@ -151,6 +151,14 @@ const cartUpdate = () => {
 
             document.querySelector('.cartQty span').textContent =
                 localStorage.getItem('cartQuantity');
+
+            let productsInCart = JSON.parse(
+                localStorage.getItem('productsInCart')
+            );
+            productsInCart = Object.values(productsInCart);
+            productsInCart[i].inCart = Number(input.value);
+            productsInCart = JSON.stringify(productsInCart);
+            localStorage.setItem('productsInCart', productsInCart);
         });
     }
 };

@@ -132,6 +132,27 @@ const cartUpdate = () => {
         let input = quantityInput[i];
         input.addEventListener('change', quantityChanged);
     }
+
+    for (let i = 0; i < quantityInput.length; i++) {
+        let input = quantityInput[i];
+        let inputValue = input.value;
+
+        input.addEventListener('change', function () {
+            if (input.value > inputValue) {
+                let cartQty = Number(localStorage.getItem('cartQuantity'));
+                cartQty++;
+                localStorage.setItem('cartQuantity', cartQty);
+            } else if (input.value < inputValue) {
+                let cartQty = Number(localStorage.getItem('cartQuantity'));
+                cartQty--;
+                localStorage.setItem('cartQuantity', cartQty);
+            }
+            inputValue = input.value;
+
+            document.querySelector('.cartQty span').textContent =
+                localStorage.getItem('cartQuantity');
+        });
+    }
 };
 
 // Funciones correspondientes a los eventos de eliminar del carrito
@@ -174,10 +195,16 @@ const quantityChanged = (e) => {
         input.value = 1;
     }
 
-    let total = document.getElementById('price1');
-    let price = productos[0].precio;
-    let newTotal = input.value * price;
-    total.innerHTML = `$${newTotal},00`;
+    let idInput = input.id;
+    idInput = idInput.replace('input', '');
+    for (prod of productos) {
+        if (prod.id == idInput) {
+            let total = document.getElementById('price' + idInput);
+            let price = prod.precio;
+            let newTotal = input.value * price;
+            total.innerHTML = `$${newTotal},00`;
+        }
+    }
 
     totalAmountUpdated();
 };

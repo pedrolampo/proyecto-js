@@ -147,7 +147,11 @@
         <section class="container-xl form">
             <h2>Contacto</h2>
             <p>Por favor no solicite autógrafos, reuniones, etc...</p>
-            <form class="row g-3">
+            <!-- <p class="thankMessage">¡Gracias por tu mensaje!</p> -->
+            <!-- <p class="thankMessage">
+                Nos contactaremos al email proporcionado.
+            </p> -->
+            <form class="row g-3" id="formContact">
                 <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Email</label>
                     <input
@@ -181,18 +185,18 @@
                     />
                 </div>
                 <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Asunto</label>
+                    <label for="inputSubject2" class="form-label">Asunto</label>
                     <input
                         name="asunto"
                         type="text"
                         class="form-control"
-                        id="inputAddress2"
+                        id="inputSubject2"
                         required
                     />
                 </div>
                 <div class="col-md-9">
-                    <label for="inputState" class="form-label">País</label>
-                    <select id="inputState" class="form-select" required>
+                    <label for="inputCountry" class="form-label">País</label>
+                    <select id="inputCountry" class="form-select" required>
                         <option selected>Elige tu país</option>
                         <option value="AR">Argentina</option>
                         <option value="BO">Bolivia</option>
@@ -224,6 +228,7 @@
                     <span class="input-group-text">Tu mensaje:</span>
                     <textarea
                         name="mensaje"
+                        id="message"
                         class="form-control"
                         aria-label="With textarea"
                         required
@@ -247,7 +252,11 @@
                     <button type="reset" class="btn btn-primary">Reset</button>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">
+                    <button
+                        id="submitButton"
+                        type="submit"
+                        class="btn btn-primary"
+                    >
                         Enviar
                     </button>
                 </div>
@@ -304,5 +313,13 @@
         <script>
             AOS.init();
         </script>
+        <!-- jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="js/contact.js"></script>
     </body>
 </html>

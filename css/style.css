@@ -409,6 +409,14 @@ section.form {
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
     padding-top: 1rem; }
+  section.form .thankMessage {
+    text-align: center;
+    font-size: 1.75rem;
+    padding-top: 0.5rem;
+    color: #FC3;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
   section.form form {
     width: 80%;
     margin: 0 auto; }

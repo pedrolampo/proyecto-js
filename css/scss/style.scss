@@ -589,6 +589,16 @@ section.form {
         padding-top: 1rem;
     }
 
+    .thankMessage {
+        text-align: center;
+        font-size: 1.75rem;
+        padding-top: 0.5rem;
+        color: $amarillo;
+        font-family: $oswald;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
     form {
         width: 80%;
         margin: 0 auto;

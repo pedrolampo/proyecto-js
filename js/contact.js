@@ -26,13 +26,14 @@ $('#submitButton').on('click', function (e) {
         )
     );
     $(
-        `<p class="thankMessage">¡Gracias por tu mensaje, ${
+        `<div id="thankMessageDiv" style="display:none"><p class="thankMessage">¡Gracias por tu mensaje, ${
             $('#inputName')[0].value
-        }!</p>`
+        }!</p><p class="thankMessage">Nos contactaremos al email proporcionado.</p></div>`
     ).insertBefore('#formContact');
-    $(
-        '<p class="thankMessage">Nos contactaremos al email proporcionado.</p>'
-    ).insertBefore('#formContact');
-    sessionStorage.setItem('mensajeContacto', JSON.stringify(mensaje));
+    $('#thankMessageDiv').slideDown('slow');
+    sessionStorage.setItem(
+        `mensaje${$('#inputName')[0].value}`,
+        JSON.stringify(mensaje)
+    );
     $(this).off(e);
 });

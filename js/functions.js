@@ -251,6 +251,6 @@ const updateQtyDisplay = () => {
         document.querySelector('.cartQty span').textContent =
             localStorage.getItem('cartQuantity');
     } else {
-        console.log('ei');
+        return;
     }
 };

@@ -1,3 +1,4 @@
+const URLPOST = 'https://jsonplaceholder.typicode.com/posts';
 let mensaje = [];
 
 class ContactMessage {
@@ -35,16 +36,29 @@ $('#submitButton').on('click', function (e) {
                 $('#message')[0].value
             )
         );
-        $(
-            `<div id="thankMessageDiv" style="display:none"><p class="thankMessage">¡Gracias por tu mensaje, ${
-                $('#inputName')[0].value
-            }!</p><p class="thankMessage">Nos contactaremos al email proporcionado.</p></div>`
-        ).insertBefore('#formContact');
-        $('#thankMessageDiv').slideDown('slow');
-        sessionStorage.setItem(
-            `mensaje${$('#inputName')[0].value}`,
-            JSON.stringify(mensaje)
-        );
+        $.post(URLPOST, mensaje[0], function (req, res, state) {
+            if (state.status === 2011) {
+                sessionStorage.setItem(
+                    `mensaje${$('#inputName')[0].value}`,
+                    JSON.stringify(req)
+                );
+                $(
+                    `<div id="thankMessageDiv" style="display:none"><p class="thankMessage">¡Gracias por tu mensaje, ${
+                        $('#inputName')[0].value
+                    }!</p><p class="thankMessage">Nos contactaremos al email ${
+                        $('#inputEmail4')[0].value
+                    }.</p></div>`
+                ).insertBefore('#formContact');
+                $('#thankMessageDiv').slideDown('slow');
+            } else {
+                $(
+                    `<div id="thankMessageDiv" style="display:none"><p class="thankMessage">Lo sentimos, en este momento no podemos procesar la información.</p>
+                    <p class="thankMessage">Por favor inténtelo de nuevo más tarde.</p></div>`
+                ).insertBefore('#formContact');
+                $('#thankMessageDiv').slideDown('slow');
+                return;
+            }
+        });
         $(this).off(e);
     } else {
         Swal.fire({

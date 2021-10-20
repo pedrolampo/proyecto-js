@@ -142,23 +142,32 @@ const cartUpdate = () => {
                 let cartQty = Number(localStorage.getItem('cartQuantity'));
                 cartQty++;
                 localStorage.setItem('cartQuantity', cartQty);
+                let productsInCart = JSON.parse(
+                    localStorage.getItem('productsInCart')
+                );
+                let prodId = input.id.replace('input', '');
+                productsInCart[prodId].inCart++;
+                localStorage.setItem(
+                    'productsInCart',
+                    JSON.stringify(productsInCart)
+                );
             } else if (input.value < inputValue) {
                 let cartQty = Number(localStorage.getItem('cartQuantity'));
                 cartQty--;
                 localStorage.setItem('cartQuantity', cartQty);
+                let productsInCart = JSON.parse(
+                    localStorage.getItem('productsInCart')
+                );
+                let prodId = input.id.replace('input', '');
+                productsInCart[prodId].inCart--;
+                localStorage.setItem(
+                    'productsInCart',
+                    JSON.stringify(productsInCart)
+                );
             }
             inputValue = input.value;
 
-            document.querySelector('.cartQty span').textContent =
-                localStorage.getItem('cartQuantity');
-
-            let productsInCart = JSON.parse(
-                localStorage.getItem('productsInCart')
-            );
-            productsInCart = Object.values(productsInCart);
-            productsInCart[i].inCart = Number(input.value);
-            productsInCart = JSON.stringify(productsInCart);
-            localStorage.setItem('productsInCart', productsInCart);
+            updateQtyDisplay();
         });
     }
 };
@@ -195,6 +204,7 @@ const removeItem = (e) => {
     localStorage.setItem('productsInCart', productsInCart);
 
     totalAmountUpdated();
+    updateQtyDisplay();
 };
 
 const quantityChanged = (e) => {
@@ -215,6 +225,7 @@ const quantityChanged = (e) => {
     }
 
     totalAmountUpdated();
+    updateQtyDisplay();
 };
 
 const totalAmountUpdated = () => {
@@ -233,4 +244,13 @@ const totalAmountUpdated = () => {
     }
 
     localStorage.setItem('totalPrice', sum);
+};
+
+const updateQtyDisplay = () => {
+    if (Number(localStorage.getItem('totalPrice')) > 0) {
+        document.querySelector('.cartQty span').textContent =
+            localStorage.getItem('cartQuantity');
+    } else {
+        console.log('ei');
+    }
 };

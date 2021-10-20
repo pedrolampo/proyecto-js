@@ -720,7 +720,7 @@ section#tienda {
             width: 100%;
             display: flex;
             text-align: left;
-            border-bottom: 2px solid $blanco;
+            border-bottom: 3px solid $blanco;
             margin: 0 auto;
             color: $amarillo;
 
@@ -762,6 +762,7 @@ section#tienda {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                border-bottom: 1px solid $blanco;
 
                 .producto {
                     width: 46%;
@@ -794,6 +795,7 @@ section#tienda {
                     color: $blanco;
                     margin: 0 1rem;
                     width: 10%;
+                    text-align: center;
 
                     img {
                         width: 3rem;
@@ -808,13 +810,16 @@ section#tienda {
                     .cantidadInput {
                         width: 3rem;
                         text-align: center;
+                        border-radius: 5px;
+                        font-family: $oswald;
                     }
                 }
 
                 .total {
                     font-size: 1rem;
                     color: $blanco;
-                    margin: 0 0 0 5rem;
+                    margin: 0 0 0 2rem;
+                    text-align: center;
                 }
             }
 
@@ -822,13 +827,15 @@ section#tienda {
                 display: flex;
                 justify-content: flex-end;
                 width: 100%;
-                padding: 1rem 1rem;
+                padding: 1rem 2rem 1rem 0;
                 font-size: 10rem;
                 color: $blanco;
+                border-top: 2px solid $blanco;
 
                 .totalTitulo {
                     width: 40%;
                     font-size: 2rem;
+                    text-transform: uppercase;
                 }
 
                 .totalCompra {
@@ -861,6 +868,21 @@ section#tienda {
                 null,
                 null
             );
+        }
+    }
+
+    div#comprar {
+        display: flex;
+        justify-content: flex-end;
+        margin: 2rem;
+        padding-right: 10rem;
+
+        .comprar {
+            font-family: $oswald;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
     }
 }

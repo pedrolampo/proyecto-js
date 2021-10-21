@@ -37,7 +37,7 @@ $('#submitButton').on('click', function (e) {
             )
         );
         $.post(URLPOST, mensaje[0], function (req, res, state) {
-            if (state.status === 2011) {
+            if (state.status === 201) {
                 sessionStorage.setItem(
                     `mensaje${$('#inputName')[0].value}`,
                     JSON.stringify(req)

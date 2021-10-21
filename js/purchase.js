@@ -5,8 +5,10 @@ let btnValidate = document.getElementById('validarDatos');
 let btnFinalizarCompra = document.getElementById('finalizarCompra');
 let buyer = document.getElementsByClassName('comprador');
 let cardInfo = document.getElementsByClassName('tarjeta');
-const notNull = (element) => element == '';
+
 btnFinalizarCompra.disabled = true;
+
+const notNull = (element) => element == '';
 
 // Desabilita el botón de comprar si no hay nada en el carrito
 function disableButton() {
@@ -50,7 +52,7 @@ function storePaymentInfo() {
     });
 }
 
-// Verifica si se rellenaron bien todos los datos, de ser positivo efectúa la compra
+// Verifica si se rellenaron bien todos los datos, de ser positivo efectúa la 'compra'
 function purchase() {
     btnFinalizarCompra.addEventListener('click', function () {
         let buyerInfo = sessionStorage.getItem('buyerInfo');
@@ -68,10 +70,20 @@ function purchase() {
                         .getElementsByClassName('carritoProductos')[0]
                         .remove();
                     localStorage.clear();
-                    window.location.reload();
+                    Swal.fire({
+                        title: '¡Muchas gracias por tu compra!',
+                        text: 'Para más información sobre el envío y la factura, revisá tú email!',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#3085d6',
+                        allowOutsideClick: false,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.reload();
+                        }
+                    });
                 } else {
                     Swal.fire(
-                        'Al parecer estamos teniendo problemas con el servidor, vuelve a intentarlo más tarde.'
+                        'Al parecer estamos teniendo problemas con el servidor, por favor vuelve a intentarlo más tarde.'
                     );
                 }
             });
@@ -79,7 +91,7 @@ function purchase() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Al parecer te has dejado un campo sin rellenar',
+                text: 'Al parecer te has dejado un campo sin rellenar en la sección de información personal.',
                 footer: 'Por favor, vuelve a intentarlo',
             });
         }

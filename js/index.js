@@ -10,7 +10,7 @@ for (let i = 0; i < cart.length; i++) {
             icon: 'success',
             title: 'Item agregado al carrito',
             showConfirmButton: false,
-            timer: 1300,
+            timer: 1500,
         });
     });
 }

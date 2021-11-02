@@ -8,6 +8,7 @@ let cardInfo = document.getElementsByClassName('tarjeta');
 
 btnFinalizarCompra.disabled = true;
 
+// notNull verifica si el elemento es vacío o no, usada en líneas 33 y 47
 const notNull = (element) => element == '';
 
 // Desabilita el botón de comprar si no hay nada en el carrito
@@ -72,7 +73,7 @@ function purchase() {
                     localStorage.clear();
                     Swal.fire({
                         title: '¡Muchas gracias por tu compra!',
-                        text: 'Para más información sobre el envío y la factura, revisá tú email!',
+                        text: 'Para más información sobre el envío y la factura, revisá tu email!',
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#3085d6',
                         allowOutsideClick: false,
@@ -81,6 +82,7 @@ function purchase() {
                             window.location.reload();
                         }
                     });
+                    sessionStorage.clear();
                 } else {
                     Swal.fire(
                         'Al parecer estamos teniendo problemas con el servidor, por favor vuelve a intentarlo más tarde.'

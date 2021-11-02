@@ -7,6 +7,7 @@ const cartQtyNumber = () => {
     }
 };
 
+// Modifica la cantidad de productos en el carrito, según se agreguen
 const cartQuantity = (product) => {
     let productsQuantity = localStorage.getItem('cartQuantity');
     productsQuantity = parseInt(productsQuantity);
@@ -65,6 +66,7 @@ const cartDisplay = () => {
     let productsContainer = document.querySelector('.carritoProductos');
     let cartAmount = localStorage.getItem('totalPrice');
 
+    //Agrega al DOM los productos que se hayan agregado al carrito
     if (cartItems && productsContainer) {
         productsContainer.innerHTML = '';
         Object.values(cartItems).map((item) => {
@@ -172,7 +174,7 @@ const cartUpdate = () => {
     }
 };
 
-// Funciones correspondientes a los eventos de eliminar del carrito
+// Funciones correspondientes a los eventos de eliminar del carrito y modificar cantidad
 const updateCartQty = (e) => {
     let buttonClicked = e.target;
     let cartQty = localStorage.getItem('cartQuantity');
